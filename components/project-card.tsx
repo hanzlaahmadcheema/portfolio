@@ -25,7 +25,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </h3>
             </div>
             {project.metrics && (
-              <div className="mt-1.5 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-mono bg-sky-50 dark:bg-cyan-950/40 border border-sky-200 dark:border-cyan-800/50 text-sky-800 dark:text-cyan-300">
+              <div className="mt-1.5 inline-flex flex-wrap items-center gap-1.5 px-2.5 py-1 rounded text-[10px] sm:text-[11px] font-mono bg-sky-50 dark:bg-cyan-950/40 border border-sky-200 dark:border-cyan-800/50 text-sky-800 dark:text-cyan-300 leading-normal">
                 <ShieldCheck className="w-3 h-3 text-sky-600 dark:text-cyan-400 shrink-0" />
                 <span>{project.metrics}</span>
               </div>

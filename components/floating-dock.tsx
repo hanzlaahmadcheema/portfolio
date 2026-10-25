@@ -53,122 +53,128 @@ export function FloatingDock({ onOpenTerminal }: FloatingDockProps) {
   };
 
   return (
-    <div className="fixed bottom-6 inset-x-0 z-50 flex justify-center items-center pointer-events-none px-4">
-      <nav className="pointer-events-auto flex items-center gap-1 sm:gap-1.5 px-3 py-2 rounded-full bg-white/85 dark:bg-[#0A0F1D]/85 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800/80 shadow-xl shadow-slate-900/10 dark:shadow-2xl dark:shadow-cyan-950/20 transition-all hover:border-slate-300 dark:hover:border-slate-700">
+    <div className="fixed bottom-4 sm:bottom-6 inset-x-0 z-50 flex justify-center items-center pointer-events-none px-2 sm:px-4">
+      <nav className="pointer-events-auto flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-full bg-white/90 dark:bg-[#0A0F1D]/90 backdrop-blur-xl border border-slate-200/90 dark:border-slate-800/80 shadow-xl shadow-slate-900/10 dark:shadow-2xl dark:shadow-cyan-950/25 transition-all max-w-[calc(100vw-1rem)] overflow-x-auto no-scrollbar">
+        {/* 1. Home */}
         <Link
           href="/"
           title="Overview / Home"
-          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors"
+          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
         >
           <Home className="w-4 h-4 transition-transform group-hover:scale-110" />
-          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm">
+          <span className="hidden sm:inline absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm whitespace-nowrap">
             Home
           </span>
         </Link>
 
+        {/* 2. Capabilities (hidden on mobile to prevent overcrowding) */}
         <a
           href="/#capabilities"
           title="Capabilities"
-          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors"
+          className="hidden sm:flex group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
         >
           <Layers className="w-4 h-4 transition-transform group-hover:scale-110" />
-          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm">
+          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm whitespace-nowrap">
             Capabilities
           </span>
         </a>
 
+        {/* 3. Featured Projects */}
         <a
           href="/#projects"
           title="Featured Projects"
-          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors"
+          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
         >
           <Briefcase className="w-4 h-4 transition-transform group-hover:scale-110" />
-          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm">
-            Featured
+          <span className="hidden sm:inline absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm whitespace-nowrap">
+            Projects
           </span>
         </a>
 
+        {/* 4. Hiring Guide */}
         <a
           href="/#hiring"
           title="Hiring & Engagement Guide"
-          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors"
+          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
         >
           <UserCheck className="w-4 h-4 transition-transform group-hover:scale-110" />
-          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm whitespace-nowrap">
+          <span className="hidden sm:inline absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm whitespace-nowrap">
             Hiring Guide
           </span>
         </a>
 
+        {/* 5. Archive (hidden on mobile) */}
         <Link
           href="/projects"
-          title="Archive Directory (40 Repositories)"
-          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors"
+          title="Archive Directory (30+ Repositories)"
+          className="hidden sm:flex group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
         >
           <Archive className="w-4 h-4 transition-transform group-hover:scale-110" />
           <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
-            Archive (40)
+            Archive (30+)
           </span>
         </Link>
 
-        <div className="w-[1px] h-5 bg-slate-200 dark:bg-slate-800 mx-0.5 sm:mx-1" />
+        <div className="w-[1px] h-4 sm:h-5 bg-slate-200 dark:bg-slate-800 mx-0.5 sm:mx-1 shrink-0" />
 
-        {/* WhatsApp direct chat trigger */}
+        {/* 6. WhatsApp direct trigger */}
         <a
           href={DATA.contact.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           title="Chat directly on WhatsApp (+92 326 6900001)"
-          className="group relative p-2 sm:p-2.5 rounded-full text-emerald-600 hover:text-emerald-500 hover:bg-emerald-50 dark:text-emerald-400 dark:hover:text-emerald-300 dark:hover:bg-emerald-950/40 transition-colors"
+          className="group relative p-2 sm:p-2.5 rounded-full text-emerald-600 hover:text-emerald-500 hover:bg-emerald-50 dark:text-emerald-400 dark:hover:text-emerald-300 dark:hover:bg-emerald-950/40 transition-colors shrink-0"
         >
           <WhatsAppIcon className="w-4 h-4 transition-transform group-hover:scale-110" />
-          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-emerald-900 border border-emerald-700 text-emerald-100 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
+          <span className="hidden sm:inline absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-emerald-900 border border-emerald-700 text-emerald-100 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
             WhatsApp
           </span>
         </a>
 
-        {/* Terminal modal trigger */}
+        {/* 7. Terminal modal trigger */}
         {onOpenTerminal && (
           <button
             onClick={onOpenTerminal}
             title="Inspect System Terminal (zsh 5.9)"
-            className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-emerald-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-emerald-400 dark:hover:bg-slate-800/60 transition-colors"
+            className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-emerald-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-emerald-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
           >
             <Terminal className="w-4 h-4 transition-transform group-hover:scale-110" />
-            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
+            <span className="hidden sm:inline absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
               Terminal
             </span>
           </button>
         )}
 
-        {/* Theme Toggle Button */}
+        {/* 8. Theme Toggle Button */}
         {mounted && (
           <button
             onClick={toggleTheme}
             title={resolvedTheme === "dark" ? "Switch to Light Theme" : "Switch to Dark Theme"}
-            className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-amber-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-amber-300 dark:hover:bg-slate-800/60 transition-colors"
+            className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-amber-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-amber-300 dark:hover:bg-slate-800/60 transition-colors shrink-0"
           >
             {resolvedTheme === "dark" ? (
               <Sun className="w-4 h-4 transition-transform group-hover:rotate-45" />
             ) : (
               <Moon className="w-4 h-4 transition-transform group-hover:-rotate-12" />
             )}
-            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
+            <span className="hidden sm:inline absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
               {resolvedTheme === "dark" ? "Light Mode" : "Dark Mode"}
             </span>
           </button>
         )}
 
-        <div className="w-[1px] h-5 bg-slate-200 dark:bg-slate-800 mx-0.5 sm:mx-1" />
+        {/* Desktop-only socials */}
+        <div className="hidden sm:block w-[1px] h-5 bg-slate-200 dark:bg-slate-800 mx-1 shrink-0" />
 
         <a
           href={DATA.contact.social.GitHub.url}
           target="_blank"
           rel="noopener noreferrer"
           title="GitHub"
-          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors"
+          className="hidden sm:flex group relative p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
         >
           <Github className="w-4 h-4 transition-transform group-hover:scale-110" />
-          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm">
+          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm whitespace-nowrap">
             GitHub
           </span>
         </a>
@@ -178,10 +184,10 @@ export function FloatingDock({ onOpenTerminal }: FloatingDockProps) {
           target="_blank"
           rel="noopener noreferrer"
           title="LinkedIn"
-          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors"
+          className="hidden sm:flex group relative p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
         >
           <Linkedin className="w-4 h-4 transition-transform group-hover:scale-110" />
-          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm">
+          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm whitespace-nowrap">
             LinkedIn
           </span>
         </a>
@@ -189,21 +195,21 @@ export function FloatingDock({ onOpenTerminal }: FloatingDockProps) {
         <a
           href={`mailto:${DATA.contact.email}`}
           title="Email"
-          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors"
+          className="hidden sm:flex group relative p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
         >
           <Mail className="w-4 h-4 transition-transform group-hover:scale-110" />
-          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm">
+          <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity shadow-sm whitespace-nowrap">
             Email
           </span>
         </a>
 
         {showScrollTop && (
           <>
-            <div className="w-[1px] h-5 bg-slate-200 dark:bg-slate-800 mx-0.5 sm:mx-1" />
+            <div className="w-[1px] h-4 sm:h-5 bg-slate-200 dark:bg-slate-800 mx-0.5 sm:mx-1 shrink-0" />
             <button
               onClick={scrollToTop}
               title="Back to top"
-              className="p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-100 dark:hover:bg-slate-800/60 transition-colors"
+              className="p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-100 dark:hover:bg-slate-800/60 transition-colors shrink-0"
             >
               <ArrowUp className="w-4 h-4" />
             </button>

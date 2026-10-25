@@ -113,16 +113,16 @@ export function ContactSection() {
         {/* Email & Recruiter Channels */}
         <div className="p-5 sm:p-6 rounded-2xl bg-white/80 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800 shadow-xl space-y-4">
           {/* Email Copy Bar */}
-          <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-[#070A12] border border-slate-200 dark:border-slate-800/90">
-            <div className="flex items-center gap-3 overflow-hidden">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-xl bg-slate-50 dark:bg-[#070A12] border border-slate-200 dark:border-slate-800/90 gap-3">
+            <div className="flex items-center gap-3 min-w-0">
               <div className="p-2 rounded-lg bg-sky-50 dark:bg-cyan-950/40 border border-sky-200 dark:border-cyan-800/50 text-sky-600 dark:text-cyan-400 shrink-0">
                 <Mail className="w-4 h-4" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-mono">
                   Official Inquiries & Formal Offers
                 </span>
-                <span className="text-xs sm:text-sm font-mono text-slate-800 dark:text-slate-200 truncate select-all font-medium">
+                <span className="text-xs sm:text-sm font-mono text-slate-800 dark:text-slate-200 select-all font-medium break-all">
                   {DATA.contact.email}
                 </span>
               </div>
@@ -130,10 +130,10 @@ export function ContactSection() {
 
             <button
               onClick={copyEmail}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-200/80 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors shrink-0 ml-2 font-medium"
+              className="flex items-center justify-center gap-1.5 px-3.5 py-2 text-xs font-mono rounded-lg bg-slate-200/80 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors shrink-0 font-medium w-full sm:w-auto shadow-sm"
             >
               {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" />}
-              <span>{copiedEmail ? "Copied" : "Copy"}</span>
+              <span>{copiedEmail ? "Copied Email" : "Copy Email"}</span>
             </button>
           </div>
 

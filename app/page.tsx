@@ -20,7 +20,7 @@ export default function Home() {
       <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-sky-200/30 dark:from-cyan-950/20 via-transparent to-transparent pointer-events-none -z-10" />
 
       {/* Main Container */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 pb-28 sm:pb-32">
         {/* Hero & Telemetry */}
         <HeroSection onOpenTerminal={() => setTerminalOpen(true)} />
 

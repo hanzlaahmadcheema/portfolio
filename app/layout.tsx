@@ -30,7 +30,7 @@ const jetbrainsMono = localFont({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hanzlaahmadcheema.github.io";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hanzlaahmad.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -156,16 +156,17 @@ const jsonLdPerson = {
   jobTitle: "Full-Stack & Systems Developer",
   description:
     "Full-Stack and Systems Developer focused on engineering resilient software platforms, deterministic background control planes, and production-grade AI pipelines.",
-  url: "https://github.com/hanzlaahmadcheema",
-  image: "https://github.com/hanzlaahmadcheema.png",
+  url: "https://hanzlaahmad.com",
+  image: "https://hanzlaahmad.com/og-image.png",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lahore",
     addressCountry: "PK",
   },
   sameAs: [
+    "https://hanzlaahmad.com",
     "https://github.com/hanzlaahmadcheema",
-    "https://www.linkedin.com/in/hanzla-ahmad-051187313",
+    "https://www.linkedin.com/in/hanzlaahmadcheema",
     "https://wa.me/923266900001",
   ],
   worksFor: {

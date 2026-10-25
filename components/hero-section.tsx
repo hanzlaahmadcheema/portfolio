@@ -57,19 +57,20 @@ export function HeroSection({ onOpenTerminal }: HeroSectionProps) {
         <div className="flex-1 space-y-4">
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-50 border border-emerald-200 text-emerald-800 dark:bg-emerald-500/10 dark:border-emerald-500/30 dark:text-emerald-400">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
-            <span>Open to Engineering Roles & Contract Projects</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse shrink-0" />
+            <span className="hidden sm:inline">Open to Engineering Roles & Contract Projects</span>
+            <span className="sm:hidden">Open to Roles & Projects</span>
           </div>
 
           {/* Name & Alias */}
           <div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white font-mono">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white font-mono">
               {DATA.name}{" "}
               <span className="text-base sm:text-lg font-normal text-slate-500 tracking-normal">
                 ({DATA.alias})
               </span>
             </h1>
-            <p className="mt-1.5 text-lg sm:text-xl text-sky-600 dark:text-cyan-400 font-mono font-medium">
+            <p className="mt-1.5 text-base sm:text-xl text-sky-600 dark:text-cyan-400 font-mono font-medium">
               {DATA.headline}
             </p>
           </div>
@@ -114,33 +115,37 @@ export function HeroSection({ onOpenTerminal }: HeroSectionProps) {
       </div>
 
       {/* Quick Recruiter & Client Signal Strip (Hiring TL;DR) */}
-      <div className="mt-6 p-4 rounded-xl bg-slate-100/70 dark:bg-[#0A0F1D]/80 border border-slate-200 dark:border-slate-800/90 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
+      <div className="mt-6 p-3 sm:p-4 rounded-xl bg-slate-100/70 dark:bg-[#0A0F1D]/80 border border-slate-200 dark:border-slate-800/90 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 text-xs font-mono">
         <div className="space-y-0.5">
           <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Experience</span>
-          <span className="text-slate-800 dark:text-slate-200 font-bold">4+ Years Production</span>
+          <span className="text-slate-800 dark:text-slate-200 font-bold">4+ Years Prod</span>
         </div>
         <div className="space-y-0.5">
           <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Track Record</span>
-          <span className="text-slate-800 dark:text-slate-200 font-bold">10 Systems • 40 Repos</span>
+          <span className="text-slate-800 dark:text-slate-200 font-bold">10 Systems • 30+ Repos</span>
         </div>
         <div className="space-y-0.5">
           <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Core Disciplines</span>
-          <span className="text-sky-700 dark:text-cyan-400 font-bold">Full-Stack • Linux • AI</span>
+          <span className="text-sky-700 dark:text-cyan-400 font-bold">
+            <span className="sm:hidden">Full-Stack • AI</span>
+            <span className="hidden sm:inline">Full-Stack • Linux • AI</span>
+          </span>
         </div>
         <div className="space-y-0.5">
           <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Availability</span>
-          <span className="text-emerald-700 dark:text-emerald-400 font-bold">Immediate (Full-Time/Contract)</span>
+          <span className="hidden sm:inline text-emerald-700 dark:text-emerald-400 font-bold">Immediate (Full-Time/Contract)</span>
+          <span className="sm:hidden text-emerald-700 dark:text-emerald-400 font-bold">Immediate (All Roles)</span>
         </div>
       </div>
 
       {/* Interactive Actions & Direct Hiring CTAs */}
-      <div className="mt-6 flex flex-wrap items-center gap-3">
+      <div className="mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3">
         {/* WhatsApp Direct Chat Button */}
         <a
           href={DATA.contact.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2.5 text-xs font-mono font-bold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-950/20 transition-all hover:scale-[1.02]"
+          className="flex items-center justify-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs font-mono font-bold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-950/20 transition-all hover:scale-[1.02] shrink-0"
           title="Chat directly on WhatsApp (+92 326 6900001)"
         >
           <WhatsAppIcon className="w-4 h-4" />
@@ -150,7 +155,7 @@ export function HeroSection({ onOpenTerminal }: HeroSectionProps) {
         {/* View All Production Systems Link */}
         <a
           href="#projects"
-          className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-mono font-medium rounded-lg bg-sky-600 hover:bg-sky-500 dark:bg-cyan-600 dark:hover:bg-cyan-500 text-white shadow-md shadow-sky-600/20 dark:shadow-cyan-950/30 transition-colors"
+          className="flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs font-mono font-medium rounded-lg bg-sky-600 hover:bg-sky-500 dark:bg-cyan-600 dark:hover:bg-cyan-500 text-white shadow-md shadow-sky-600/20 dark:shadow-cyan-950/30 transition-colors shrink-0"
         >
           <span>Production Systems</span>
           <ArrowRight className="w-3.5 h-3.5" />
@@ -160,18 +165,18 @@ export function HeroSection({ onOpenTerminal }: HeroSectionProps) {
         {onOpenTerminal && (
           <button
             onClick={onOpenTerminal}
-            className="flex items-center gap-2 px-4 py-2.5 text-xs font-mono font-medium rounded-lg bg-white hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 hover:border-slate-400 dark:border-slate-700 dark:hover:border-cyan-500/50 shadow-sm transition-all group"
+            className="flex items-center justify-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs font-mono font-medium rounded-lg bg-white hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 hover:border-slate-400 dark:border-slate-700 dark:hover:border-cyan-500/50 shadow-sm transition-all group shrink-0"
           >
             <Terminal className="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400 group-hover:rotate-6 transition-transform" />
-            <span>interactive terminal</span>
-            <span className="text-[10px] text-slate-500 dark:text-slate-400 font-mono ml-1">
+            <span>terminal</span>
+            <span className="text-[10px] text-slate-500 dark:text-slate-400 font-mono ml-0.5">
               zsh
             </span>
           </button>
         )}
 
         {/* Social & Contact Icons */}
-        <div className="flex items-center gap-1.5 ml-auto text-slate-500 dark:text-slate-400">
+        <div className="flex items-center gap-1 sm:gap-1.5 w-full sm:w-auto justify-start sm:justify-start sm:ml-auto pt-2 sm:pt-0 text-slate-500 dark:text-slate-400">
           <a
             href={DATA.contact.whatsappUrl}
             target="_blank"
@@ -185,7 +190,7 @@ export function HeroSection({ onOpenTerminal }: HeroSectionProps) {
             href={DATA.contact.social.GitHub.url}
             target="_blank"
             rel="noopener noreferrer"
-            title="GitHub Profile (40 Repos)"
+            title="GitHub Profile (30+ Repos)"
             className="p-2.5 rounded-lg hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-white transition-colors"
           >
             <Github className="w-4 h-4" />

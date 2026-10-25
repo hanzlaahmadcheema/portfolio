@@ -130,7 +130,7 @@ export const engineer = {
 ----------------------------------------------
 • Target Titles: Senior Full-Stack Engineer, Linux Systems Engineer, Founding Engineer
 • Work Formats: Remote (Worldwide), Hybrid (Lahore), Relocation Considered
-• Production Track Record: 4+ Years Experience • 10 Production Systems • 40 Public Repositories
+• Production Track Record: 4+ Years Experience • 10 Production Systems • 30+ Public Repositories
 • Core Disciplines: Next.js 15, TypeScript, React 19, Node.js, Python, Linux Daemons (systemd), PostgreSQL, SQLite WAL, Docker, Gemini AI Pipelines.
 
 2. FOR FOUNDERS & CLIENTS (PROJECT SCOPE):
@@ -144,38 +144,6 @@ DIRECT CONTACT CHANNELS:
 • Email: hanzlaahmadch@gmail.com
 • LinkedIn: https://linkedin.com/in/hanzlaahmadcheema
 • GitHub: https://github.com/hanzlaahmadcheema`,
-    },
-    "resume.md": {
-      name: "resume.md",
-      type: "file",
-      size: "1.9KB",
-      permissions: "-rw-r--r--",
-      modified: "Oct 25 11:15",
-      content: `# Hanzla Ahmad — Resume & Career Overview
-
-- **Title:** Full-Stack & Systems Developer
-- **Location:** Lahore, Pakistan (PKT / UTC+5)
-- **Primary Stacks:** TypeScript, Python, Next.js 15, React 19, PostgreSQL, SQLite, Linux, Docker, Nginx, AI Pipelines
-
-## Professional Track Record:
-1. **HA Entertainment** | Founder & Lead Systems Engineer (2024 - Present)
-   - Architected media streaming pipelines and background daemon infrastructure.
-   - Reduced video buffer latency by 35% through custom caching proxies.
-
-2. **MedBills MBS** | Information Technology Administrator (2024 - Present)
-   - Oversee clinical IT infrastructure, HIPAA compliance, and network uptime (99.98%).
-   - Automated server backups and encrypted off-site disaster recovery mirrors.
-
-3. **Ajwa Mart Sweets & Bakers** | IT Systems & POS Specialist (2024 - 2024)
-   - Managed high-volume dual-shift POS operations and automated inventory reconciliation.
-   - Engineered daily cash balance scripts eliminating register discrepancy losses.
-
-4. **IT Beam** | MERN Stack Developer Intern (Jul 2026 - Sep 2026)
-   - Contributed to full-stack LMS platform architecture using MongoDB, Express.js, React, and Node.js.
-   - Built course management, quiz assessment modules, and role-based access control with secure REST APIs.
-
-5. **DevelopersHub Corporation©** | Software Engineering Intern (2024 - 2024)
-   - Contributed full-stack modules in React and Node.js with REST API integration.`,
     },
     ".bashrc": {
       name: ".bashrc",
@@ -648,8 +616,8 @@ GitHub: https://github.com/hanzlaahmadcheema/BatteryMoniter`,
             },
           },
         },
-        "all_40_public_repos.txt": {
-          name: "all_40_public_repos.txt",
+        "all_public_repos.txt": {
+          name: "all_public_repos.txt",
           type: "file",
           size: "4.8KB",
           permissions: "-rw-r--r--",
@@ -694,7 +662,7 @@ KEY CONTRIBUTIONS:
           modified: "Oct 25 13:30",
           content: `COMPANY: MedBills MBS
 ROLE: Information Technology Administrator
-PERIOD: 2024 - Present
+PERIOD: Nov 2025 - Oct 2026
 LOCATION: Remote / Hybrid
 
 KEY CONTRIBUTIONS:
@@ -1095,7 +1063,7 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
         outputNode = (
           <div className="space-y-2 py-1 font-mono text-xs">
             <div className="text-slate-500 border-b border-slate-200 dark:border-slate-800 pb-1 flex items-center justify-between">
-              <span className="text-sky-700 dark:text-cyan-400 font-bold">~/projects (10 Flagships + 40 Public Repositories)</span>
+              <span className="text-sky-700 dark:text-cyan-400 font-bold">~/projects (10 Flagships + 30+ Public Repositories)</span>
               <span className="text-[10px] text-slate-400 dark:text-slate-500">click name to inspect</span>
             </div>
 
@@ -1147,10 +1115,10 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
 
             <div className="pt-2 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-[11px]">
               <span
-                onClick={() => executeCommand("cat all_40_public_repos.txt")}
+                onClick={() => executeCommand("cat all_public_repos.txt")}
                 className="text-emerald-700 dark:text-emerald-400 hover:underline cursor-pointer font-medium"
               >
-                all_40_public_repos.txt (click to print complete catalog)
+                all_public_repos.txt (click to print complete catalog)
               </span>
               <a
                 href="/projects"
@@ -1179,8 +1147,29 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
       case "resume":
       case "cv": {
         outputNode = (
-          <div className="py-2 px-3 rounded bg-slate-100/90 dark:bg-[#050811] border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-300 font-mono text-xs whitespace-pre-wrap leading-relaxed max-h-[50vh] overflow-y-auto">
-            {ROOT_VFS.children?.["resume.md"]?.content}
+          <div className="py-3 px-4 rounded-xl bg-slate-100/90 dark:bg-[#050811] border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 font-mono text-xs space-y-2 leading-relaxed">
+            <div className="text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-2">
+              <span>●</span> Direct Verified Credentials & CV Access
+            </div>
+            <p className="text-slate-600 dark:text-slate-400">
+              For verified employment offers, direct client engagements, or background verification, Hanzla Ahmad&apos;s official CV is provided directly upon verified request.
+            </p>
+            <div className="pt-2 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap gap-3">
+              <a
+                href="https://wa.me/923266900001?text=Hi%20Hanzla,%20requesting%20your%20official%20CV%20for%20an%20opportunity."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold"
+              >
+                ➔ Request on WhatsApp (+92 326 6900001)
+              </a>
+              <a
+                href="mailto:hanzlaahmadch@gmail.com?subject=CV%20Request%20-%20Hanzla%20Ahmad"
+                className="text-sky-600 dark:text-cyan-400 hover:underline font-semibold"
+              >
+                ➔ Request via Email (hanzlaahmadch@gmail.com)
+              </a>
+            </div>
           </div>
         );
         break;
@@ -1271,7 +1260,7 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
                 <div className="text-[11px] text-slate-600 dark:text-slate-400 space-y-1">
                   <div><span className="font-semibold text-slate-800 dark:text-slate-200">Target Roles:</span> Senior Full-Stack Engineer, Linux Systems Engineer, Founding Engineer</div>
                   <div><span className="font-semibold text-slate-800 dark:text-slate-200">Work Formats:</span> Remote Worldwide • Hybrid (Lahore) • Relocation Considered</div>
-                  <div><span className="font-semibold text-slate-800 dark:text-slate-200">Experience:</span> 4+ Years Production • 10 Systems • 40 Repos</div>
+                  <div><span className="font-semibold text-slate-800 dark:text-slate-200">Experience:</span> 4+ Years Production • 10 Systems • 30+ Repos</div>
                   <div><span className="font-semibold text-slate-800 dark:text-slate-200">Disciplines:</span> Next.js 15, TypeScript, Node.js, Linux Daemons, PostgreSQL, Docker, AI Pipelines</div>
                 </div>
                 <div className="pt-1 flex items-center gap-2">
@@ -2125,7 +2114,6 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
     { label: "projects", cmd: "projects" },
     { label: "contact", cmd: "contact" },
     { label: "about", cmd: "about" },
-    { label: "resume", cmd: "resume" },
     { label: "skills", cmd: "skills" },
     { label: "status", cmd: "status" },
     { label: "neofetch", cmd: "neofetch" },
@@ -2312,8 +2300,8 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
             <span className="hidden sm:inline font-mono">VFS: IN-MEMORY (SYNC)</span>
           </div>
           <div className="flex items-center gap-2 font-mono">
-            <span>TAB: AUTOCOMPLETE</span>
-            <span className="text-slate-300 dark:text-slate-600">•</span>
+            <span className="hidden sm:inline">TAB: AUTOCOMPLETE</span>
+            <span className="hidden sm:inline text-slate-300 dark:text-slate-600">•</span>
             <span className="text-sky-700 dark:text-cyan-400 font-semibold">PKT (UTC+5)</span>
           </div>
         </div>

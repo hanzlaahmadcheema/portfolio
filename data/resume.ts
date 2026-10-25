@@ -62,7 +62,7 @@ export const DATA: ResumeData = {
   name: "Hanzla Ahmad",
   initials: "HA",
   alias: "Cheemæ",
-  url: "https://github.com/hanzlaahmadcheema",
+  url: "https://hanzlaahmad.com",
   location: "Lahore, Pakistan",
   locationLink: "https://www.google.com/maps/place/Lahore,+Pakistan",
   timezone: "Asia/Karachi",
@@ -224,7 +224,7 @@ export const DATA: ResumeData = {
       location: "Lahore, Pakistan",
       title: "Information Technology Administrator",
       start: "Nov 2025",
-      end: "Present",
+      end: "Oct 2026",
       description:
         "Overseeing core IT operations and mission-critical web infrastructure. Designed and launched a high-accessibility medical portal with structured data workflows, role-based controls, and operational troubleshooting.",
     },

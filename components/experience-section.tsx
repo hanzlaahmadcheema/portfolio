@@ -29,7 +29,7 @@ export function ExperienceSection() {
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <h3 className="text-base font-bold text-slate-900 dark:text-white font-mono flex items-center gap-2">
+                <h3 className="text-base font-bold text-slate-900 dark:text-white font-mono flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
                   <span>{role.title}</span>
                   <span className="text-slate-400 dark:text-slate-500 font-normal">@</span>
                   <span className="text-sky-600 dark:text-cyan-400">{role.company}</span>

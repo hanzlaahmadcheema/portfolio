@@ -104,7 +104,7 @@ export function ProjectsSection() {
             Looking for all public tools, daemons, and microservices?
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-xl font-sans">
-            Explore 40 verified public repositories with instant search, programming language filtering, direct GitHub source links, and production deployment URLs.
+            Explore 30+ verified public repositories with instant search, programming language filtering, direct GitHub source links, and production deployment URLs.
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export function ProjectsSection() {
           href="/projects"
           className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 dark:bg-cyan-500 dark:hover:bg-cyan-400 text-white dark:text-slate-950 font-mono font-bold text-xs shadow-md shadow-sky-600/20 dark:shadow-cyan-950/30 transition-all shrink-0 group-hover:translate-x-0.5"
         >
-          <span>Browse All 40 Projects</span>
+          <span>Browse All 30+ Projects</span>
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

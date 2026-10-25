@@ -127,20 +127,6 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
-    "name": "cv",
-    "url": "https://github.com/hanzlaahmadcheema/cv",
-    "isPublic": true,
-    "language": "HTML",
-    "description": "Personal single-page curriculum vitae and portfolio website in clean HTML/CSS.",
-    "topics": [
-      "css3",
-      "cv",
-      "html5",
-      "portfolio",
-      "resume"
-    ]
-  },
-  {
     "name": "Digital-Press-Club",
     "url": "https://github.com/hanzlaahmadcheema/Digital-Press-Club",
     "isPublic": true,
@@ -184,20 +170,6 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "email-marketing",
       "python",
       "smtp"
-    ]
-  },
-  {
-    "name": "end4-pC",
-    "url": "https://github.com/hanzlaahmadcheema/end4-pC",
-    "isPublic": true,
-    "language": "QML",
-    "description": "Personal customized fork of illogical-impulse (dots-hyprland) desktop configuration for Linux.",
-    "topics": [
-      "dotfiles",
-      "hyprland",
-      "linux-desktop",
-      "qml",
-      "wayland"
     ]
   },
   {
@@ -261,30 +233,6 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "ci-cd",
       "code-review",
       "github-api"
-    ]
-  },
-  {
-    "name": "GitPractice",
-    "url": "https://github.com/hanzlaahmadcheema/GitPractice",
-    "isPublic": true,
-    "language": "N/A",
-    "description": "Git and GitHub version control practice repository.",
-    "topics": [
-      "git",
-      "version-control"
-    ]
-  },
-  {
-    "name": "GP_Assignment_BSCS_5A",
-    "url": "https://github.com/hanzlaahmadcheema/GP_Assignment_BSCS_5A",
-    "isPublic": true,
-    "language": "N/A",
-    "description": "Multiplayer game architecture design assignment covering network synchronization, state management, and scalability.",
-    "topics": [
-      "coursework",
-      "game-architecture",
-      "game-programming",
-      "multiplayer"
     ]
   },
   {
@@ -424,20 +372,6 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
-    "name": "static-movie-page",
-    "url": "https://github.com/hanzlaahmadcheema/static-movie-page",
-    "isPublic": true,
-    "language": "JavaScript",
-    "description": "Responsive movie discovery page and streaming automation scripts for HA Entertainment.",
-    "topics": [
-      "css3",
-      "html5",
-      "javascript",
-      "movie-streaming",
-      "ha-entertainment"
-    ]
-  },
-  {
     "name": "ToDo-Widget",
     "url": "https://github.com/hanzlaahmadcheema/ToDo-Widget",
     "isPublic": true,
@@ -467,20 +401,6 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
-    "name": "University",
-    "url": "https://github.com/hanzlaahmadcheema/University",
-    "isPublic": true,
-    "language": "C++",
-    "description": "Academic coursework and lab implementations covering Algorithms, Computer Architecture, and Web Programming.",
-    "topics": [
-      "algorithms",
-      "computer-architecture",
-      "coursework",
-      "cpp",
-      "riphah"
-    ]
-  },
-  {
     "name": "WA-Agent",
     "url": "https://github.com/hanzlaahmadcheema/WA-Agent",
     "isPublic": true,
@@ -495,20 +415,6 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "remote-control",
       "sqlite",
       "whatsapp"
-    ]
-  },
-  {
-    "name": "Web-Lab",
-    "url": "https://github.com/hanzlaahmadcheema/Web-Lab",
-    "isPublic": true,
-    "language": "HTML",
-    "description": "Web Programming course laboratory assignments and frontend exercises.",
-    "topics": [
-      "css",
-      "html",
-      "javascript",
-      "lab-tasks",
-      "web-development"
     ]
   },
   {
@@ -558,19 +464,6 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "unix-socket",
       "waybar",
       "whatsapp"
-    ]
-  },
-  {
-    "name": "WinWidgets",
-    "url": "https://github.com/hanzlaahmadcheema/WinWidgets",
-    "isPublic": true,
-    "language": "C#",
-    "description": "Fork of WinWidgets \u2014 a framework for building web-based Windows 11 desktop widgets using HTML, CSS, and JavaScript.",
-    "topics": [
-      "csharp",
-      "desktop-widgets",
-      "widgets",
-      "windows11"
     ]
   },
   {

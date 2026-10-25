@@ -1,16 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { DATA } from "@/data/resume";
 import {
-  Briefcase,
   CheckCircle2,
-  Clock,
   ExternalLink,
-  FileText,
   Mail,
-  MapPin,
-  Send,
   Sparkles,
   UserCheck,
   Zap,
@@ -34,19 +29,20 @@ export function HiringSection() {
         <span className="text-xs font-mono font-bold text-sky-600 dark:text-cyan-400 tracking-wider">
           03 // HIRING & COLLABORATION PROFILE
         </span>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white font-mono mt-1">
-          Hiring Information: For HR, Recruiters & Project Clients
+        <h2 className="text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white font-mono mt-1">
+          Hiring & Engagement Profile
         </h2>
-        <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl font-sans">
-          Whether you are an HR leader filling a full-time engineering role or a founder/client seeking a dedicated systems architect for a contract build, here is the operational blueprint.
+        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl font-sans">
+          Operational blueprints and engagement formats for talent recruiters, engineering leaders, and direct project clients.
         </p>
       </div>
 
       {/* Dual Pathways Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         {/* Card 1: For HR & Talent Acquisition */}
-        <div className="p-6 sm:p-7 rounded-2xl bg-white/85 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all flex flex-col justify-between space-y-6">
+        <div className="p-6 sm:p-7 rounded-2xl bg-white/85 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all flex flex-col h-full justify-between">
           <div className="space-y-4">
+            {/* Badges Row */}
             <div className="flex flex-wrap items-center justify-between gap-2.5">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/50 text-sky-700 dark:text-sky-300 font-semibold whitespace-nowrap">
                 <UserCheck className="w-3.5 h-3.5 shrink-0 text-sky-600 dark:text-sky-400" />
@@ -68,71 +64,72 @@ export function HiringSection() {
             </div>
 
             {/* Target Titles & Key Credentials */}
-            <div className="space-y-2 pt-1 font-sans text-xs">
+            <div className="space-y-2.5 pt-1 font-sans text-xs">
               <div className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Target Roles:</strong> Senior Full-Stack Engineer, Systems Engineer, Founding Engineer, AI Platform Developer.
+                  <strong>Target Roles:</strong> Senior Full-Stack Engineer, Systems Engineer, Founding Engineer.
                 </span>
               </div>
               <div className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Work Format:</strong> Remote (Worldwide), Hybrid / On-Site (Lahore, Pakistan), Open to Relocation.
+                  <strong>Work Format:</strong> Remote (Worldwide), Hybrid (Lahore, PK), Open to Relocation.
                 </span>
               </div>
               <div className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Production Record:</strong> 4+ years commercial experience, 10 flagship platforms, 40 public GitHub repositories.
+                  <strong>Track Record:</strong> 4+ years commercial experience, 10 platforms, 30+ public repos.
                 </span>
               </div>
               <div className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Core Stack:</strong> Next.js 15, React 19, TypeScript, Python, PostgreSQL, Linux daemons, Docker, Nginx.
+                  <strong>Core Stack:</strong> Next.js 15, React 19, TypeScript, Python, PostgreSQL, Linux daemons.
                 </span>
               </div>
             </div>
           </div>
 
           {/* Action CTAs for HR */}
-          <div className="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2.5 font-mono text-xs">
+          <div className="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800 space-y-2.5 font-mono text-xs">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-md shadow-emerald-950/20 transition-all hover:scale-[1.01]"
+              className="flex items-center justify-center gap-2 w-full h-11 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-md shadow-emerald-950/20 transition-all hover:scale-[1.01] whitespace-nowrap"
             >
-              <WhatsAppIcon className="w-4 h-4" />
-              <span>Connect on WhatsApp (+92 326 6900001)</span>
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
+              <span className="truncate">Connect on WhatsApp (+92 326 6900001)</span>
             </a>
 
             <div className="grid grid-cols-2 gap-2">
               <a
                 href={`mailto:${DATA.contact.email}?subject=Job%20Opportunity%20-%20Hanzla%20Ahmad&body=Hi%20Hanzla,%0A%0AWe%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20engineering%20role%20with%20our%20team.`}
-                className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
+                className="flex items-center justify-center gap-1.5 h-10 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition-colors whitespace-nowrap font-medium"
               >
-                <Mail className="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400" />
-                <span>Email Job Brief</span>
+                <Mail className="w-3.5 h-3.5 shrink-0 text-sky-600 dark:text-cyan-400" />
+                <span className="truncate">Email Job Brief</span>
               </a>
 
               <a
                 href={DATA.contact.social.LinkedIn.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
+                className="flex items-center justify-center gap-1.5 h-10 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition-colors whitespace-nowrap font-medium"
               >
-                <ExternalLink className="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400" />
-                <span>LinkedIn InMail</span>
+                <ExternalLink className="w-3.5 h-3.5 shrink-0 text-sky-600 dark:text-cyan-400" />
+                <span className="truncate">LinkedIn InMail</span>
               </a>
             </div>
           </div>
         </div>
 
         {/* Card 2: For Founders, CTOs & Project Clients */}
-        <div className="p-6 sm:p-7 rounded-2xl bg-white/85 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all flex flex-col justify-between space-y-6">
+        <div className="p-6 sm:p-7 rounded-2xl bg-white/85 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all flex flex-col h-full justify-between">
           <div className="space-y-4">
+            {/* Badges Row */}
             <div className="flex flex-wrap items-center justify-between gap-2.5">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800/50 text-cyan-800 dark:text-cyan-300 font-semibold whitespace-nowrap">
                 <Zap className="w-3.5 h-3.5 shrink-0 text-cyan-600 dark:text-cyan-400" />
@@ -154,61 +151,61 @@ export function HiringSection() {
             </div>
 
             {/* Engagement Scopes */}
-            <div className="space-y-2 pt-1 font-sans text-xs">
+            <div className="space-y-2.5 pt-1 font-sans text-xs">
               <div className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Production Web Apps & Portals:</strong> Next.js 15 App Router, React 19, Server Actions, modern database schemas.
+                  <strong>Production Web Platforms:</strong> Next.js 15 App Router, React 19, Server Actions, modern schemas.
                 </span>
               </div>
               <div className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Headless Daemons & Control Planes:</strong> 24/7 background process supervisors, Unix socket IPC, WhatsApp bots.
+                  <strong>Headless Daemons & IPC:</strong> 24/7 background process supervisors, Unix socket IPC, WhatsApp bots.
                 </span>
               </div>
               <div className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Generative AI & Agentic Tooling:</strong> Multimodal Gemini 2.0 API, structured RAG pipelines, automated discovery.
+                  <strong>Generative AI & Agentic:</strong> Multimodal Gemini 2.0 API, structured RAG pipelines, automated workflows.
                 </span>
               </div>
               <div className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
                 <CheckCircle2 className="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Turnaround & Quality:</strong> Rapid MVP delivery, clean git version control, Docker containerization, post-launch monitoring.
+                  <strong>Turnaround & Quality:</strong> Rapid MVP delivery, clean git version control, Docker containerization.
                 </span>
               </div>
             </div>
           </div>
 
           {/* Action CTAs for Project Clients */}
-          <div className="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2.5 font-mono text-xs">
+          <div className="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800 space-y-2.5 font-mono text-xs">
             <a
               href={`https://wa.me/923266900001?text=Hi%20Hanzla,%20I%20have%20a%20project%20in%20mind%20and%20would%20like%20to%20discuss%20scope,%20timeline,%20and%20pricing.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 dark:bg-cyan-600 dark:hover:bg-cyan-500 text-white font-bold shadow-md shadow-sky-600/20 dark:shadow-cyan-950/30 transition-all hover:scale-[1.01]"
+              className="flex items-center justify-center gap-2 w-full h-11 px-4 rounded-xl bg-sky-600 hover:bg-sky-500 dark:bg-cyan-600 dark:hover:bg-cyan-500 text-white font-bold shadow-md shadow-sky-600/20 dark:shadow-cyan-950/30 transition-all hover:scale-[1.01] whitespace-nowrap"
             >
-              <WhatsAppIcon className="w-4 h-4" />
-              <span>Discuss Project on WhatsApp</span>
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
+              <span className="truncate">Discuss Project on WhatsApp</span>
             </a>
 
             <div className="grid grid-cols-2 gap-2">
               <a
                 href={`mailto:${DATA.contact.email}?subject=Project%20Inquiry%20-%20Hanzla%20Ahmad&body=Hi%20Hanzla,%0A%0AWe%20are%20looking%20to%20build%20a%20project%20and%20would%20like%20to%20discuss%20specifications%20and%20turnaround.`}
-                className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
+                className="flex items-center justify-center gap-1.5 h-10 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition-colors whitespace-nowrap font-medium"
               >
-                <Mail className="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400" />
-                <span>Email Project Scope</span>
+                <Mail className="w-3.5 h-3.5 shrink-0 text-sky-600 dark:text-cyan-400" />
+                <span className="truncate">Email Project</span>
               </a>
 
               <a
                 href="#projects"
-                className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
+                className="flex items-center justify-center gap-1.5 h-10 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition-colors whitespace-nowrap font-medium"
               >
-                <Sparkles className="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400" />
-                <span>Review Systems</span>
+                <Sparkles className="w-3.5 h-3.5 shrink-0 text-sky-600 dark:text-cyan-400" />
+                <span className="truncate">Review Systems</span>
               </a>
             </div>
           </div>
