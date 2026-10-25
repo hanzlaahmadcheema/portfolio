@@ -47,14 +47,15 @@ export function HiringSection() {
         {/* Card 1: For HR & Talent Acquisition */}
         <div className="p-6 sm:p-7 rounded-2xl bg-white/85 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all flex flex-col justify-between space-y-6">
           <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/50 text-sky-700 dark:text-sky-300 font-semibold">
-                <UserCheck className="w-3.5 h-3.5" />
-                <span>For Recruiters & Hiring Managers</span>
-              </span>
-              <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold">
-                Available Immediately
-              </span>
+            <div className="flex flex-wrap items-center justify-between gap-2.5">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/50 text-sky-700 dark:text-sky-300 font-semibold whitespace-nowrap">
+                <UserCheck className="w-3.5 h-3.5 shrink-0 text-sky-600 dark:text-sky-400" />
+                <span>Recruiters & Talent HR</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/50 text-emerald-700 dark:text-emerald-400 font-medium whitespace-nowrap">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse shrink-0" />
+                <span>Available Immediately</span>
+              </div>
             </div>
 
             <div>
@@ -132,14 +133,15 @@ export function HiringSection() {
         {/* Card 2: For Founders, CTOs & Project Clients */}
         <div className="p-6 sm:p-7 rounded-2xl bg-white/85 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700 shadow-sm hover:shadow-lg dark:hover:shadow-xl transition-all flex flex-col justify-between space-y-6">
           <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800/50 text-cyan-800 dark:text-cyan-300 font-semibold">
-                <Zap className="w-3.5 h-3.5" />
-                <span>For Founders & Project Clients</span>
-              </span>
-              <span className="text-xs font-mono text-cyan-600 dark:text-cyan-400 font-bold">
-                Contract Engagements
-              </span>
+            <div className="flex flex-wrap items-center justify-between gap-2.5">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800/50 text-cyan-800 dark:text-cyan-300 font-semibold whitespace-nowrap">
+                <Zap className="w-3.5 h-3.5 shrink-0 text-cyan-600 dark:text-cyan-400" />
+                <span>Founders & Direct Clients</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800/50 text-cyan-800 dark:text-cyan-300 font-medium whitespace-nowrap">
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 dark:bg-cyan-400 shrink-0" />
+                <span>Contract & Direct Builds</span>
+              </div>
             </div>
 
             <div>
