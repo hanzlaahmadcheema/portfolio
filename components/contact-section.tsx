@@ -13,6 +13,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { Github, Linkedin } from "@/components/icons";
+import { ContactForm } from "@/components/contact-form";
 
 function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -108,6 +109,31 @@ export function ContactSection() {
               <span>{copiedPhone ? "Copied" : "Copy Number"}</span>
             </button>
           </div>
+        </div>
+
+        {/* Formspree Interactive Direct Dispatch Card */}
+        <div className="p-5 sm:p-7 rounded-2xl bg-white/85 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800/90 shadow-xl space-y-5">
+          <div className="border-b border-slate-200 dark:border-slate-800/80 pb-3.5 flex items-center justify-between">
+            <div className="flex items-center gap-2.5">
+              <div className="p-1.5 rounded-lg bg-sky-50 dark:bg-cyan-950/40 border border-sky-200 dark:border-cyan-800/50 text-sky-600 dark:text-cyan-400">
+                <MessageSquare className="w-4 h-4" />
+              </div>
+              <div>
+                <span className="font-mono text-sm sm:text-base font-bold text-slate-900 dark:text-white block">
+                  Send Direct Inquiry
+                </span>
+                <span className="text-[10px] text-slate-500 dark:text-slate-400 font-mono block">
+                  Formspree Verified Delivery to hanzlaahmadch@gmail.com
+                </span>
+              </div>
+            </div>
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-[10px] font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800/50 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              Direct Pipeline
+            </span>
+          </div>
+
+          <ContactForm />
         </div>
 
         {/* Email & Recruiter Channels */}
