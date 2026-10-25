@@ -6,14 +6,13 @@ import {
   Mail,
   Copy,
   Check,
-  Github,
-  Linkedin,
   ArrowUpRight,
   Phone,
   MessageSquare,
   Clock,
   ExternalLink,
 } from "lucide-react";
+import { Github, Linkedin } from "@/components/icons";
 
 function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (

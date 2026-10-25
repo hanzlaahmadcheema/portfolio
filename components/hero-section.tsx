@@ -7,12 +7,11 @@ import {
   MapPin,
   Clock,
   ArrowRight,
-  Github,
-  Linkedin,
   Mail,
   CheckCircle2,
   Sparkles,
 } from "lucide-react";
+import { Github, Linkedin } from "@/components/icons";
 import { DATA } from "@/data/resume";
 
 function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {

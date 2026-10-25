@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { ExternalLink, Github, ChevronDown, Cpu, Layers, ShieldCheck } from "lucide-react";
+import { ExternalLink, ChevronDown, Cpu, Layers, ShieldCheck } from "lucide-react";
+import { Github } from "@/components/icons";
 import { Project } from "@/data/resume";
 
 interface ProjectCardProps {

@@ -7,8 +7,6 @@ import {
   Layers,
   Briefcase,
   Terminal,
-  Github,
-  Linkedin,
   Mail,
   ArrowUp,
   Archive,
@@ -16,6 +14,7 @@ import {
   Moon,
   UserCheck,
 } from "lucide-react";
+import { Github, Linkedin } from "@/components/icons";
 import { useTheme } from "./theme-provider";
 import { DATA } from "@/data/resume";
 

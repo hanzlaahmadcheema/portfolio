@@ -3,7 +3,8 @@
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { ARCHIVE_PROJECTS } from "@/data/archive";
-import { ArrowLeft, Search, Github, ExternalLink, Code2 } from "lucide-react";
+import { ArrowLeft, Search, ExternalLink, Code2 } from "lucide-react";
+import { Github } from "@/components/icons";
 import { FloatingDock } from "@/components/floating-dock";
 import { Footer } from "@/components/footer";
 

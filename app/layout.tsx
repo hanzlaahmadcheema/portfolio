@@ -30,30 +30,102 @@ const jetbrainsMono = localFont({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hanzlaahmadcheema.github.io";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://github.com/hanzlaahmadcheema"),
-  title: "Hanzla Ahmad | Full-Stack & Systems Developer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Hanzla Ahmad | Full-Stack & Systems Developer",
+    template: "%s | Hanzla Ahmad",
+  },
   description:
     "Production-grade full-stack web platforms, deterministic control planes, and Generative AI pipelines by Hanzla Ahmad (Cheemæ).",
   keywords: [
     "Hanzla Ahmad",
     "Cheemæ",
+    "hanzlaahmadcheema",
     "Full Stack Developer",
     "Systems Engineer",
     "Next.js 15",
+    "React 19",
     "TypeScript",
+    "Node.js",
     "Python",
+    "MERN Stack Developer",
+    "Tailwind CSS",
+    "PostgreSQL",
+    "SQLite",
+    "Docker",
+    "Linux Systems",
+    "Ubuntu",
     "Generative AI",
+    "LLM Engineering",
+    "RAG",
+    "RESTful APIs",
+    "WebSocket",
+    "Server Actions",
     "Lahore Pakistan",
+    "Hire Full Stack Developer",
+    "Software Engineer Portfolio",
+    "IT Beam Intern",
+    "FastAPI",
+    "Express.js",
+    "Prisma ORM",
   ],
   authors: [{ name: "Hanzla Ahmad", url: "https://github.com/hanzlaahmadcheema" }],
+  creator: "Hanzla Ahmad",
+  publisher: "Hanzla Ahmad",
+  alternates: {
+    canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     title: "Hanzla Ahmad | Full-Stack & Systems Developer",
-    description: "Production web applications, headless control planes, and AI automation.",
-    url: "https://github.com/hanzlaahmadcheema",
+    description:
+      "Production-grade web platforms, deterministic control planes, and Generative AI pipelines.",
+    url: siteUrl,
     siteName: "Hanzla Ahmad Portfolio",
-    images: [{ url: "/banner.png", width: 1584, height: 396, alt: "Hanzla Ahmad Portfolio Banner" }],
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Hanzla Ahmad — Full-Stack & Systems Developer Portfolio",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hanzla Ahmad | Full-Stack & Systems Developer",
+    description:
+      "Production-grade web platforms, deterministic control planes, and Generative AI pipelines.",
+    images: ["/og-image.png"],
+    creator: "@hanzlaahmadcheema",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -76,6 +148,62 @@ const themeScript = `
   })();
 `;
 
+const jsonLdPerson = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Hanzla Ahmad",
+  alternateName: ["Cheemæ", "hanzlaahmadcheema"],
+  jobTitle: "Full-Stack & Systems Developer",
+  description:
+    "Full-Stack and Systems Developer focused on engineering resilient software platforms, deterministic background control planes, and production-grade AI pipelines.",
+  url: "https://github.com/hanzlaahmadcheema",
+  image: "https://github.com/hanzlaahmadcheema.png",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lahore",
+    addressCountry: "PK",
+  },
+  sameAs: [
+    "https://github.com/hanzlaahmadcheema",
+    "https://www.linkedin.com/in/hanzla-ahmad-051187313",
+    "https://wa.me/923266900001",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "IT Beam",
+  },
+  knowsAbout: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Python",
+    "MERN Stack",
+    "MongoDB",
+    "Express.js",
+    "PostgreSQL",
+    "Docker",
+    "Linux Ubuntu",
+    "Generative AI",
+    "REST APIs",
+    "Tailwind CSS",
+  ],
+};
+
+const jsonLdWebSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Hanzla Ahmad Portfolio",
+  alternateName: "Hanzla Ahmad Developer Portfolio",
+  url: siteUrl,
+  description:
+    "Production-grade full-stack web platforms, deterministic control planes, and Generative AI pipelines by Hanzla Ahmad (Cheemæ).",
+  author: {
+    "@type": "Person",
+    name: "Hanzla Ahmad",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -86,6 +214,14 @@ export default function RootLayout({
       <head>
         <meta name="color-scheme" content="light dark" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
+        />
       </head>
       <body className="min-h-screen bg-slate-50 dark:bg-[#070A11] text-slate-800 dark:text-[#E2E8F0] font-sans antialiased selection:bg-cyan-500/20 selection:text-cyan-900 dark:selection:text-cyan-300 transition-colors duration-200">
         <ThemeProvider>
