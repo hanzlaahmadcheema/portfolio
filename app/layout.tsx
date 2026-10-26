@@ -81,6 +81,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
       { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/icon.png", sizes: "512x512", type: "image/png" },
     ],
@@ -95,7 +99,7 @@ export const metadata: Metadata = {
     description:
       "Production-grade web platforms, deterministic control planes, and Generative AI pipelines.",
     url: siteUrl,
-    siteName: "Hanzla Ahmad Portfolio",
+    siteName: "Hanzla Ahmad",
     locale: "en_US",
     type: "website",
     images: [
@@ -157,7 +161,7 @@ const jsonLdPerson = {
   description:
     "Full-Stack and Systems Developer focused on engineering resilient software platforms, deterministic background control planes, and production-grade AI pipelines.",
   url: "https://hanzlaahmad.com",
-  image: "https://hanzlaahmad.com/og-image.png",
+  image: "https://hanzlaahmad.com/avatar.jpg",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lahore",
@@ -171,7 +175,7 @@ const jsonLdPerson = {
   ],
   worksFor: {
     "@type": "Organization",
-    name: "IT Beam",
+    name: "HA Entertainment",
   },
   knowsAbout: [
     "Next.js",
@@ -194,8 +198,12 @@ const jsonLdPerson = {
 const jsonLdWebSite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Hanzla Ahmad Portfolio",
-  alternateName: "Hanzla Ahmad Developer Portfolio",
+  name: "Hanzla Ahmad",
+  alternateName: [
+    "Hanzla Ahmad (Cheemæ)",
+    "Hanzla Ahmad Portfolio",
+    "hanzlaahmad.com",
+  ],
   url: siteUrl,
   description:
     "Production-grade full-stack web platforms, deterministic control planes, and Generative AI pipelines by Hanzla Ahmad (Cheemæ).",
