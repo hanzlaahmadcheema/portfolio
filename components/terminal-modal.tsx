@@ -109,7 +109,7 @@ export const engineer = {
   ],
 
   contact: {
-    email: "hanzlaahmadch@gmail.com",
+    email: "hello@hanzlaahmad.com",
     phone: "+92 326 6900001",
     whatsapp: "https://wa.me/923266900001",
     github: "https://github.com/hanzlaahmadcheema",
@@ -141,7 +141,7 @@ export const engineer = {
 
 DIRECT CONTACT CHANNELS:
 • WhatsApp: https://wa.me/923266900001 (Phone: +92 326 6900001)
-• Email: hanzlaahmadch@gmail.com
+• Email: hello@hanzlaahmad.com
 • LinkedIn: https://linkedin.com/in/hanzlaahmadcheema
 • GitHub: https://github.com/hanzlaahmadcheema`,
     },
@@ -735,7 +735,7 @@ KEY CONTRIBUTIONS:
           size: "120B",
           permissions: "-rw-r--r--",
           modified: "Oct 25 12:00",
-          content: `hanzlaahmadch@gmail.com\n\nRun 'get email' to copy to clipboard or 'open email' to launch mail client.`,
+          content: `hello@hanzlaahmad.com\n\nRun 'get email' to copy to clipboard or 'open email' to launch mail client.`,
         },
         "whatsapp.url": {
           name: "whatsapp.url",
@@ -1164,10 +1164,10 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
                 ➔ Request on WhatsApp (+92 326 6900001)
               </a>
               <a
-                href="mailto:hanzlaahmadch@gmail.com?subject=CV%20Request%20-%20Hanzla%20Ahmad"
+                href="mailto:hello@hanzlaahmad.com?subject=CV%20Request%20-%20Hanzla%20Ahmad"
                 className="text-sky-600 dark:text-cyan-400 hover:underline font-semibold"
               >
-                ➔ Request via Email (hanzlaahmadch@gmail.com)
+                ➔ Request via Email (hello@hanzlaahmad.com)
               </a>
             </div>
           </div>
@@ -1204,7 +1204,7 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
                   onClick={() => executeCommand("get email")}
                   className="text-emerald-700 dark:text-emerald-400 hover:underline cursor-pointer font-bold"
                 >
-                  hanzlaahmadch@gmail.com
+                  hello@hanzlaahmad.com
                 </span>
                 <span className="text-slate-400 dark:text-slate-500 text-[10px] ml-2">(click to copy)</span>
               </div>
@@ -1273,7 +1273,7 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
                     Chat on WhatsApp [↗]
                   </a>
                   <a
-                    href="mailto:hanzlaahmadch@gmail.com?subject=Engineering%20Role%20Discussion%20-%20Hanzla%20Ahmad"
+                    href="mailto:hello@hanzlaahmad.com?subject=Engineering%20Role%20Discussion%20-%20Hanzla%20Ahmad"
                     className="px-2 py-0.5 rounded bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-[10px] transition-colors"
                   >
                     Email Brief
@@ -1301,7 +1301,7 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
                     WhatsApp Project Chat [↗]
                   </a>
                   <a
-                    href="mailto:hanzlaahmadch@gmail.com?subject=Project%20Scope%20Inquiry%20-%20Hanzla%20Ahmad"
+                    href="mailto:hello@hanzlaahmad.com?subject=Project%20Scope%20Inquiry%20-%20Hanzla%20Ahmad"
                     className="px-2 py-0.5 rounded bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-[10px] transition-colors"
                   >
                     Email RFP
@@ -1823,14 +1823,14 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
         }
 
         if (item === "email") {
-          navigator.clipboard.writeText("hanzlaahmadch@gmail.com");
+          navigator.clipboard.writeText("hello@hanzlaahmad.com");
           setCopyFeedback("Copied to clipboard");
           setTimeout(() => setCopyFeedback(null), 3000);
           outputNode = (
             <div className="space-y-1 text-emerald-400 font-mono text-xs">
-              <div className="font-bold">Copied to clipboard: hanzlaahmadch@gmail.com</div>
+              <div className="font-bold">Copied to clipboard: hello@hanzlaahmad.com</div>
               <div className="text-slate-400">
-                mailto: <a href="mailto:hanzlaahmadch@gmail.com" className="text-cyan-400 hover:underline">hanzlaahmadch@gmail.com</a>
+                mailto: <a href="mailto:hello@hanzlaahmad.com" className="text-cyan-400 hover:underline">hello@hanzlaahmad.com</a>
               </div>
             </div>
           );
@@ -1935,8 +1935,8 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
           window.open("https://linkedin.com/in/hanzlaahmadcheema", "_blank");
           outputNode = <div className="text-emerald-400 font-mono text-xs">Opening linkedin.com/in/hanzlaahmadcheema</div>;
         } else if (target === "email" || target === "mail") {
-          window.location.href = "mailto:hanzlaahmadch@gmail.com";
-          outputNode = <div className="text-emerald-400 font-mono text-xs">Launching mailto:hanzlaahmadch@gmail.com</div>;
+          window.location.href = "mailto:hello@hanzlaahmad.com";
+          outputNode = <div className="text-emerald-400 font-mono text-xs">Launching mailto:hello@hanzlaahmad.com</div>;
         } else if (target === "projects" || target === "archive") {
           window.location.href = "/projects";
           outputNode = <div className="text-emerald-400 font-mono text-xs">Navigating to /projects</div>;

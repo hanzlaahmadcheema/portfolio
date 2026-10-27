@@ -123,7 +123,7 @@ export function ContactSection() {
                   Send Direct Inquiry
                 </span>
                 <span className="text-[10px] text-slate-500 dark:text-slate-400 font-mono block">
-                  Formspree Verified Delivery to hanzlaahmadch@gmail.com
+                  Formspree Verified Delivery to hello@hanzlaahmad.com
                 </span>
               </div>
             </div>

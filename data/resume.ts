@@ -178,7 +178,7 @@ export const DATA: ResumeData = {
   ],
 
   contact: {
-    email: "hanzlaahmadch@gmail.com",
+    email: "hello@hanzlaahmad.com",
     tel: "+92 326 6900001",
     whatsappUrl: "https://wa.me/923266900001?text=Hi%20Hanzla,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20/%20role.",
     social: {
@@ -199,7 +199,7 @@ export const DATA: ResumeData = {
       },
       Email: {
         name: "Email",
-        url: "mailto:hanzlaahmadch@gmail.com",
+        url: "mailto:hello@hanzlaahmad.com",
         icon: "mail",
       },
     },

@@ -28,7 +28,7 @@ export function ContactForm() {
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto font-sans leading-relaxed">
             Your message has been delivered directly to Hanzla Ahmad&apos;s primary inbox (
             <span className="font-mono text-slate-800 dark:text-slate-200 font-semibold">
-              hanzlaahmadch@gmail.com
+              hello@hanzlaahmad.com
             </span>
             ). Typical response turnaround is within 12–24 hours.
           </p>
