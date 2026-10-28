@@ -13,6 +13,7 @@ import {
   Sun,
   Moon,
   UserCheck,
+  FileText,
 } from "lucide-react";
 import { Github, Linkedin } from "@/components/icons";
 import { useTheme } from "./theme-provider";
@@ -117,6 +118,19 @@ export function FloatingDock({ onOpenTerminal }: FloatingDockProps) {
           <Archive className="w-4 h-4 transition-transform group-hover:scale-110" aria-hidden="true" />
           <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
             Archive (30+)
+          </span>
+        </Link>
+
+        {/* 6. Official ATS Resume */}
+        <Link
+          href="/resume"
+          title="Official ATS Resume (View & Download)"
+          aria-label="Official ATS Resume (View & Download)"
+          className="group relative p-2 sm:p-2.5 rounded-full text-slate-600 hover:text-sky-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-cyan-400 dark:hover:bg-slate-800/60 transition-colors shrink-0"
+        >
+          <FileText className="w-4 h-4 transition-transform group-hover:scale-110" aria-hidden="true" />
+          <span className="hidden sm:inline absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[11px] font-mono rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-sm">
+            Resume (ATS)
           </span>
         </Link>
 

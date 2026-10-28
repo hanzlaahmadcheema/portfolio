@@ -24,6 +24,8 @@ export interface ResumeData {
   initials: string;
   alias: string;
   url: string;
+  resumeUrl: string;
+  resumeDocxUrl: string;
   location: string;
   locationLink: string;
   timezone: string;
@@ -55,6 +57,19 @@ export interface ResumeData {
     end: string;
     description: string;
   }[];
+  education: {
+    degree: string;
+    institution: string;
+    location: string;
+    start: string;
+    end: string;
+    coursework: string[];
+  }[];
+  certifications: {
+    issuer: string;
+    name: string;
+    date: string;
+  }[];
   projects: Project[];
 }
 
@@ -63,10 +78,12 @@ export const DATA: ResumeData = {
   initials: "HA",
   alias: "Cheemæ",
   url: "https://hanzlaahmad.com",
+  resumeUrl: "/resume.pdf",
+  resumeDocxUrl: "/resume.docx",
   location: "Lahore, Pakistan",
   locationLink: "https://www.google.com/maps/place/Lahore,+Pakistan",
   timezone: "Asia/Karachi",
-  headline: "Full-Stack & Systems Developer",
+  headline: "Full-Stack & Systems Software Engineer",
 
   // Expansive Overview (Zero project names mentioned)
   overview: [
@@ -260,6 +277,93 @@ export const DATA: ResumeData = {
       end: "May 2025",
       description:
         "Collaborated on agile feature delivery, code reviews, and Git branching workflows. Optimized REST API endpoints and authored comprehensive integration test suites.",
+    },
+  ],
+
+  education: [
+    {
+      degree: "Bachelor of Science in Computer Science (BSCS)",
+      institution: "Riphah International University",
+      location: "Lahore, Pakistan",
+      start: "2022",
+      end: "2026",
+      coursework: [
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Database Systems",
+        "Computer Networks",
+        "Software Engineering",
+        "Object-Oriented Programming",
+        "Theory of Automata",
+      ],
+    },
+  ],
+
+  certifications: [
+    {
+      issuer: "Google Cloud Skills Boost",
+      name: "Responsible AI: Applying AI Principles with Google Cloud",
+      date: "Oct 2026",
+    },
+    {
+      issuer: "Google Cloud Skills Boost",
+      name: "Introduction to Large Language Models",
+      date: "Oct 2026",
+    },
+    {
+      issuer: "Google Cloud Skills Boost",
+      name: "Introduction to Generative AI",
+      date: "Oct 2026",
+    },
+    {
+      issuer: "Cisco Networking Academy",
+      name: "Python Essentials 1",
+      date: "Oct 2026",
+    },
+    {
+      issuer: "Cisco Networking Academy",
+      name: "Linux Unhatched",
+      date: "Oct 2026",
+    },
+    {
+      issuer: "Cisco Networking Academy",
+      name: "Introduction to Cybersecurity",
+      date: "Oct 2026",
+    },
+    {
+      issuer: "Cisco Networking Academy",
+      name: "Networking Basics",
+      date: "Oct 2026",
+    },
+    {
+      issuer: "Cisco Networking Academy",
+      name: "Computer Hardware Basics",
+      date: "Oct 2026",
+    },
+    {
+      issuer: "Cisco Networking Academy",
+      name: "Operating Systems Basics",
+      date: "May 2026",
+    },
+    {
+      issuer: "Cisco Networking Academy",
+      name: "JavaScript Essentials 1 & 2",
+      date: "Jan & Feb 2026",
+    },
+    {
+      issuer: "Cisco Networking Academy",
+      name: "C++ Essentials 2",
+      date: "May 2025",
+    },
+    {
+      issuer: "Cisco Networking Academy",
+      name: "Introduction to IoT",
+      date: "2024",
+    },
+    {
+      issuer: "fondi Inc",
+      name: "CEFR B2 Independent English Proficiency Certification",
+      date: "Sep 2024",
     },
   ],
 

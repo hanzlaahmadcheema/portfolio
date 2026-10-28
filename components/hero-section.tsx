@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Terminal,
   MapPin,
@@ -10,6 +11,7 @@ import {
   Mail,
   CheckCircle2,
   Sparkles,
+  FileText,
 } from "lucide-react";
 import { Github, Linkedin } from "@/components/icons";
 import { DATA } from "@/data/resume";
@@ -160,6 +162,19 @@ export function HeroSection({ onOpenTerminal }: HeroSectionProps) {
           <span>Production Systems</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </a>
+
+        {/* View / Download Official ATS Resume */}
+        <Link
+          href="/resume"
+          className="flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs font-mono font-medium rounded-lg bg-white hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 hover:border-slate-400 dark:border-slate-700 dark:hover:border-cyan-500/50 shadow-sm transition-all group shrink-0"
+          title="View & Download Official ATS-Friendly Resume (PDF & DOCX)"
+        >
+          <FileText className="w-3.5 h-3.5 text-sky-600 dark:text-cyan-400 group-hover:scale-110 transition-transform" />
+          <span>Resume</span>
+          <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono font-bold">
+            ATS
+          </span>
+        </Link>
 
         {/* Terminal Modal Trigger */}
         {onOpenTerminal && (

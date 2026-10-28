@@ -145,6 +145,53 @@ DIRECT CONTACT CHANNELS:
 • LinkedIn: https://linkedin.com/in/hanzlaahmadcheema
 • GitHub: https://github.com/hanzlaahmadcheema`,
     },
+    "resume.pdf": {
+      name: "resume.pdf",
+      type: "file",
+      size: "144KB",
+      permissions: "-rw-r--r--",
+      modified: "Oct 28 18:48",
+      content: `[BINARY PDF FILE]
+Hanzla Ahmad — Official ATS Resume (2 Pages, Tagged PDF v1.4)
+Download URL: /resume.pdf
+View URL: /resume
+Format: Adobe PDF, 100% ATS Verified`,
+    },
+    "resume.txt": {
+      name: "resume.txt",
+      type: "file",
+      size: "7.6KB",
+      permissions: "-rw-r--r--",
+      modified: "Oct 28 18:48",
+      content: `# HANZLA AHMAD
+Full-Stack & Systems Software Engineer
+Lahore, Pakistan | +92 326 6900001 | hello@hanzlaahmad.com
+Portfolio: https://hanzlaahmad.com | LinkedIn: https://linkedin.com/in/hanzlaahmadcheema | GitHub: https://github.com/hanzlaahmadcheema
+
+[Online Version]: https://hanzlaahmad.com/resume
+[Download PDF]:   https://hanzlaahmad.com/resume.pdf
+[Download DOCX]:  https://hanzlaahmad.com/resume.docx
+
+PROFESSIONAL SUMMARY:
+Results-driven Full-Stack & Systems Software Engineer with 4+ years of hands-on experience building production web platforms, deterministic Linux background daemons, and Generative AI agent systems.
+
+EXPERIENCE:
+- HA Entertainment — Founder & Lead Systems Engineer (Jun 2020 – Present)
+- MedBills MBS — Information Technology Administrator (Nov 2025 – Oct 2026)
+- Ajwa Mart Sweets & Bakers — IT Systems & POS Specialist (Jul 2021 – Present)
+- IT Beam — MERN Stack Developer Intern (Jul 2026 – Sep 2026)
+- DevelopersHub Corporation — Software Engineering Intern (Mar 2025 – May 2025)
+
+FEATURED PROJECTS:
+- WA-Agent: Deterministic WhatsApp Control Plane & Terminal Supervisor
+- ReqForge: AI Requirements Engineering & PRD Platform
+- Franchise Expense Reconciliation System (Jazz Franchise 7301)
+- Pepsi Stock Balance: Route Distribution Portal
+- whatsapp-widget-daemon: Low-overhead Headless WebSocket IPC
+
+EDUCATION:
+- BSCS, Riphah International University (2022 – 2026)`,
+    },
     ".bashrc": {
       name: ".bashrc",
       type: "file",
@@ -1147,28 +1194,42 @@ export function TerminalModal({ isOpen, onClose }: TerminalModalProps) {
       case "resume":
       case "cv": {
         outputNode = (
-          <div className="py-3 px-4 rounded-xl bg-slate-100/90 dark:bg-[#050811] border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 font-mono text-xs space-y-2 leading-relaxed">
-            <div className="text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-2">
-              <span>●</span> Direct Verified Credentials & CV Access
+          <div className="py-3 px-4 rounded-xl bg-slate-100/90 dark:bg-[#050811] border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 font-mono text-xs space-y-2.5 leading-relaxed">
+            <div className="text-emerald-600 dark:text-emerald-400 font-bold flex items-center justify-between">
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                Official ATS-Verified Resume (100% Parser Compliant)
+              </span>
+              <span className="text-[10px] text-slate-500">v2026.10</span>
             </div>
             <p className="text-slate-600 dark:text-slate-400">
-              For verified employment offers, direct client engagements, or background verification, Hanzla Ahmad&apos;s official CV is provided directly upon verified request.
+              Validated against Workday, Taleo, Greenhouse, Lever &amp; iCIMS parsing engines. Single-column linear stream, zero layout traps, 2 pages.
             </p>
-            <div className="pt-2 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 font-semibold">
               <a
-                href="https://wa.me/923266900001?text=Hi%20Hanzla,%20requesting%20your%20official%20CV%20for%20an%20opportunity."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-emerald-600 dark:text-emerald-400 hover:underline font-semibold"
+                href="/resume"
+                className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-center transition-colors"
               >
-                ➔ Request on WhatsApp (+92 326 6900001)
+                <span>➔ View in Browser</span>
               </a>
               <a
-                href="mailto:hello@hanzlaahmad.com?subject=CV%20Request%20-%20Hanzla%20Ahmad"
-                className="text-sky-600 dark:text-cyan-400 hover:underline font-semibold"
+                href="/resume.pdf"
+                download="Hanzla_Ahmad_Resume_ATS.pdf"
+                className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-center transition-colors"
               >
-                ➔ Request via Email (hello@hanzlaahmad.com)
+                <span>➔ Download PDF</span>
               </a>
+              <a
+                href="/resume.docx"
+                download="Hanzla_Ahmad_Resume_ATS.docx"
+                className="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-lg bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-center transition-colors"
+              >
+                <span>➔ Download DOCX</span>
+              </a>
+            </div>
+            <div className="pt-2 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-slate-500">
+              <span>Email: <a href="mailto:hello@hanzlaahmad.com" className="text-sky-600 dark:text-cyan-400 hover:underline">hello@hanzlaahmad.com</a></span>
+              <span>WhatsApp: <a href="https://wa.me/923266900001" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline">+92 326 6900001</a></span>
             </div>
           </div>
         );

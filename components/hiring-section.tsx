@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { DATA } from "@/data/resume";
 import {
   CheckCircle2,
@@ -9,6 +10,7 @@ import {
   Sparkles,
   UserCheck,
   Zap,
+  FileText,
 } from "lucide-react";
 
 function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
@@ -94,11 +96,19 @@ export function HiringSection() {
 
           {/* Action CTAs for HR */}
           <div className="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800 space-y-2.5 font-mono text-xs">
+            <Link
+              href="/resume"
+              className="flex items-center justify-center gap-2 w-full h-11 px-4 rounded-xl bg-sky-600 hover:bg-sky-500 dark:bg-cyan-600 dark:hover:bg-cyan-500 text-white font-bold shadow-md shadow-sky-600/20 dark:shadow-cyan-950/30 transition-all hover:scale-[1.01] whitespace-nowrap"
+            >
+              <FileText className="w-4 h-4 shrink-0" />
+              <span>View &amp; Download ATS Resume (PDF / DOCX)</span>
+            </Link>
+
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full h-11 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold shadow-md shadow-emerald-950/20 transition-all hover:scale-[1.01] whitespace-nowrap"
+              className="flex items-center justify-center gap-2 w-full h-10 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold shadow-sm transition-all hover:scale-[1.01] whitespace-nowrap"
             >
               <WhatsAppIcon className="w-4 h-4 shrink-0" />
               <span className="truncate">Connect on WhatsApp (+92 326 6900001)</span>
