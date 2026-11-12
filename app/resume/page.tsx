@@ -107,7 +107,7 @@ Node.js, Baileys, Unix Domain Sockets, Linux IPC | https://github.com/hanzlaahma
 EDUCATION
 ================================================================================
 Bachelor of Science in Computer Science (BSCS)
-Riphah International University, Lahore, Pakistan | 2022 – 2026
+Riphah International University, Lahore, Pakistan | Feb 2024 – Feb 2028
 Relevant Coursework: Data Structures & Algorithms, Operating Systems, Database Systems, Computer Networks, Software Engineering, Object-Oriented Programming, Theory of Automata.
 
 ================================================================================
@@ -119,12 +119,13 @@ VERIFIED CERTIFICATIONS & CREDENTIALS
   * Introduction to Generative AI (Oct 2026)
 - Cisco Networking Academy:
   * Python Essentials 1 (Oct 2026)
+  * Python Essentials 2 (Nov 2026)
   * Linux Unhatched (Oct 2026)
   * Introduction to Cybersecurity (Oct 2026)
   * Networking Basics (Oct 2026)
   * Computer Hardware Basics (Oct 2026)
   * Operating Systems Basics (May 2026)
-  * JavaScript Essentials 1 & 2 (Jan & Feb 2026)
+  * JavaScript Essentials 1 & 2 (Nov 2026)
   * C++ Essentials 2 (May 2025)
   * Introduction to IoT (2024)
 - Language Proficiency:
@@ -617,7 +618,7 @@ export default function ResumePage() {
                     Bachelor of Science in Computer Science (BSCS)
                   </div>
                   <div className="font-mono text-xs text-slate-500 dark:text-slate-400 print:text-black">
-                    2022 – 2026
+                    Feb 2024 – Feb 2028
                   </div>
                 </div>
                 <div className="text-slate-600 dark:text-slate-400 italic print:text-black">
@@ -648,12 +649,13 @@ export default function ResumePage() {
                   <strong className="font-semibold text-slate-900 dark:text-slate-100 print:text-black">Cisco Networking Academy:</strong>
                   <ul className="list-disc list-outside pl-4 space-y-0.5 mt-0.5">
                     <li>Python Essentials 1 (Oct 2026)</li>
+                    <li>Python Essentials 2 (Nov 2026)</li>
                     <li>Linux Unhatched (Oct 2026)</li>
                     <li>Introduction to Cybersecurity (Oct 2026)</li>
                     <li>Networking Basics (Oct 2026)</li>
                     <li>Computer Hardware Basics (Oct 2026)</li>
                     <li>Operating Systems Basics (May 2026)</li>
-                    <li>JavaScript Essentials 1 &amp; 2 (Jan &amp; Feb 2026)</li>
+                    <li>JavaScript Essentials 1 &amp; 2 (Nov 2026)</li>
                     <li>C++ Essentials 2 (May 2025)</li>
                     <li>Introduction to IoT (2024)</li>
                   </ul>

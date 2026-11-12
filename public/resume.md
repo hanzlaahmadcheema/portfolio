@@ -87,7 +87,7 @@ Results-driven Full-Stack & Systems Software Engineer with 4+ years of hands-on 
 ## EDUCATION
 
 **Bachelor of Science in Computer Science (BSCS)**  
-*Riphah International University, Lahore, Pakistan* | 2022 – 2026  
+*Riphah International University, Lahore, Pakistan* | Feb 2024 – Feb 2028  
 - **Relevant Coursework:** Data Structures & Algorithms, Operating Systems, Database Systems, Computer Networks, Software Engineering, Object-Oriented Programming, Theory of Automata.
 
 ---
@@ -100,12 +100,13 @@ Results-driven Full-Stack & Systems Software Engineer with 4+ years of hands-on 
   - Introduction to Generative AI (Oct 2026)
 - **Cisco Networking Academy:**
   - Python Essentials 1 (Oct 2026)
+  - Python Essentials 2 (Nov 2026)
   - Linux Unhatched (Oct 2026)
   - Introduction to Cybersecurity (Oct 2026)
   - Networking Basics (Oct 2026)
   - Computer Hardware Basics (Oct 2026)
   - Operating Systems Basics (May 2026)
-  - JavaScript Essentials 1 & 2 (Jan & Feb 2026)
+  - JavaScript Essentials 1 & 2 (Nov 2026)
   - C++ Essentials 2 (May 2025)
   - Introduction to IoT (2024)
 - **Language & Communication:**

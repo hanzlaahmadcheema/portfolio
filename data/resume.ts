@@ -285,8 +285,8 @@ export const DATA: ResumeData = {
       degree: "Bachelor of Science in Computer Science (BSCS)",
       institution: "Riphah International University",
       location: "Lahore, Pakistan",
-      start: "2022",
-      end: "2026",
+      start: "Feb 2024",
+      end: "Feb 2028",
       coursework: [
         "Data Structures & Algorithms",
         "Operating Systems",
@@ -322,6 +322,11 @@ export const DATA: ResumeData = {
     },
     {
       issuer: "Cisco Networking Academy",
+      name: "Python Essentials 2",
+      date: "Nov 2026",
+    },
+    {
+      issuer: "Cisco Networking Academy",
       name: "Linux Unhatched",
       date: "Oct 2026",
     },
@@ -348,7 +353,7 @@ export const DATA: ResumeData = {
     {
       issuer: "Cisco Networking Academy",
       name: "JavaScript Essentials 1 & 2",
-      date: "Jan & Feb 2026",
+      date: "Nov 2026",
     },
     {
       issuer: "Cisco Networking Academy",

@@ -190,7 +190,7 @@ FEATURED PROJECTS:
 - whatsapp-widget-daemon: Low-overhead Headless WebSocket IPC
 
 EDUCATION:
-- BSCS, Riphah International University (2022 – 2026)`,
+- BSCS, Riphah International University (Feb 2024 – Feb 2028)`,
     },
     ".bashrc": {
       name: ".bashrc",
