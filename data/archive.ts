@@ -68,6 +68,30 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
+    "name": "bissonnet-medical-center-preview",
+    "url": "https://github.com/hanzlaahmadcheema/bissonnet-medical-center-preview",
+    "isPublic": true,
+    "language": "TypeScript",
+    "description": "",
+    "topics": []
+  },
+  {
+    "name": "brando-chiropractic-preview",
+    "url": "https://github.com/hanzlaahmadcheema/brando-chiropractic-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "",
+    "topics": []
+  },
+  {
+    "name": "bright-value-dental-preview",
+    "url": "https://github.com/hanzlaahmadcheema/bright-value-dental-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "",
+    "topics": []
+  },
+  {
     "name": "BulletEcho2D",
     "url": "https://github.com/hanzlaahmadcheema/BulletEcho2D",
     "isPublic": true,
@@ -81,6 +105,14 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "unity",
       "unity3d"
     ]
+  },
+  {
+    "name": "cake-o-clock-preview",
+    "url": "https://github.com/hanzlaahmadcheema/cake-o-clock-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "Preview website for Cake O'Clock, hobby baker in Avery Ranch, Austin, Texas",
+    "topics": []
   },
   {
     "name": "Car-Rental-System",
@@ -144,6 +176,14 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
+    "name": "drews-place-preview",
+    "url": "https://github.com/hanzlaahmadcheema/drews-place-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "",
+    "topics": []
+  },
+  {
     "name": "E-Voting-System",
     "url": "https://github.com/hanzlaahmadcheema/E-Voting-System",
     "isPublic": true,
@@ -170,6 +210,20 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "email-marketing",
       "python",
       "smtp"
+    ]
+  },
+  {
+    "name": "end4-pC",
+    "url": "https://github.com/hanzlaahmadcheema/end4-pC",
+    "isPublic": true,
+    "language": "QML",
+    "description": "Personal customized fork of illogical-impulse (dots-hyprland) desktop configuration for Linux.",
+    "topics": [
+      "dotfiles",
+      "hyprland",
+      "linux-desktop",
+      "qml",
+      "wayland"
     ]
   },
   {
@@ -236,6 +290,35 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
+    "name": "GP_Assignment_BSCS_5A",
+    "url": "https://github.com/hanzlaahmadcheema/GP_Assignment_BSCS_5A",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "Multiplayer game architecture design assignment covering network synchronization, state management, and scalability.",
+    "topics": [
+      "coursework",
+      "game-architecture",
+      "game-programming",
+      "multiplayer"
+    ]
+  },
+  {
+    "name": "hanzlaahmadcheema",
+    "url": "https://github.com/hanzlaahmadcheema/hanzlaahmadcheema",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "Config, README, and profile showcase for Hanzla Ahmad (@hanzlaahmadcheema)",
+    "topics": []
+  },
+  {
+    "name": "house-of-sweets-and-treats-preview",
+    "url": "https://github.com/hanzlaahmadcheema/house-of-sweets-and-treats-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "",
+    "topics": []
+  },
+  {
     "name": "KernalX",
     "url": "https://github.com/hanzlaahmadcheema/KernalX",
     "isPublic": true,
@@ -252,6 +335,33 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
+    "name": "local-voice-studio",
+    "url": "https://github.com/hanzlaahmadcheema/local-voice-studio",
+    "isPublic": true,
+    "language": "Python",
+    "description": "100% local, air-gapped speech-to-text recording, transcription, and multi-format export workstation",
+    "topics": [
+      "air-gapped",
+      "audio-recorder",
+      "ctranslate2",
+      "desktop-app",
+      "faster-whisper",
+      "local-ai",
+      "offline-ai",
+      "pyside6",
+      "python",
+      "qt6",
+      "speech-recognition",
+      "speech-to-text",
+      "srt",
+      "subtitles",
+      "transcription",
+      "urdu",
+      "webvtt",
+      "whisper"
+    ]
+  },
+  {
     "name": "m3u8Downloader",
     "url": "https://github.com/hanzlaahmadcheema/m3u8Downloader",
     "isPublic": true,
@@ -265,6 +375,22 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "stream-downloader",
       "video-downloader"
     ]
+  },
+  {
+    "name": "mary-butlers-granddaughter-preview",
+    "url": "https://github.com/hanzlaahmadcheema/mary-butlers-granddaughter-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "",
+    "topics": []
+  },
+  {
+    "name": "moms-sweet-lab-preview",
+    "url": "https://github.com/hanzlaahmadcheema/moms-sweet-lab-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "Preview website for Mom's Sweet Lab, home bakery in Kyle, Texas",
+    "topics": []
   },
   {
     "name": "movie-app",
@@ -312,6 +438,14 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
+    "name": "pashias-sweet-treats-preview",
+    "url": "https://github.com/hanzlaahmadcheema/pashias-sweet-treats-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "",
+    "topics": []
+  },
+  {
     "name": "pepsi-stock-balance",
     "url": "https://github.com/hanzlaahmadcheema/pepsi-stock-balance",
     "isPublic": true,
@@ -324,6 +458,32 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "prisma",
       "typescript",
       "stock-balance"
+    ]
+  },
+  {
+    "name": "phoenix-rise-preview",
+    "url": "https://github.com/hanzlaahmadcheema/phoenix-rise-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "Preview website for Phoenix Rise Home Improvement & Roofing (Spring, TX) \u2014 Next.js static site",
+    "topics": []
+  },
+  {
+    "name": "portfolio",
+    "url": "https://github.com/hanzlaahmadcheema/portfolio",
+    "isPublic": true,
+    "language": "TypeScript",
+    "description": "Official engineering portfolio and interactive systems platform for Hanzla Ahmad. Built with Next.js 16, React 19, TypeScript, and Tailwind CSS.",
+    "topics": [
+      "full-stack",
+      "typescript",
+      "developer-portfolio",
+      "nextjs",
+      "portfolio",
+      "react",
+      "systems-engineer",
+      "tailwindcss",
+      "terminal"
     ]
   },
   {
@@ -372,6 +532,51 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
+    "name": "simos-diner-preview",
+    "url": "https://github.com/hanzlaahmadcheema/simos-diner-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "",
+    "topics": []
+  },
+  {
+    "name": "smiles-dental-care-preview",
+    "url": "https://github.com/hanzlaahmadcheema/smiles-dental-care-preview",
+    "isPublic": true,
+    "language": "TypeScript",
+    "description": "Preview website for Smiles Dental Care (Houston, TX) \u2014 Next.js + Tailwind. Built as a client preview; the clinic reviews and corrects details before launch.",
+    "topics": []
+  },
+  {
+    "name": "sms-forwarder",
+    "url": "https://github.com/hanzlaahmadcheema/sms-forwarder",
+    "isPublic": true,
+    "language": "Kotlin",
+    "description": "Android SMS Forwarder with multi-provider dispatch and Keystore encryption",
+    "topics": [
+      "android",
+      "jetpack-compose",
+      "keystore",
+      "kotlin",
+      "material3",
+      "privacy",
+      "room-database",
+      "security",
+      "sms-forwarder",
+      "telegram-bot",
+      "webhook",
+      "whatsapp"
+    ]
+  },
+  {
+    "name": "sms-forwarder-worker",
+    "url": "https://github.com/hanzlaahmadcheema/sms-forwarder-worker",
+    "isPublic": true,
+    "language": "JavaScript",
+    "description": "",
+    "topics": []
+  },
+  {
     "name": "ToDo-Widget",
     "url": "https://github.com/hanzlaahmadcheema/ToDo-Widget",
     "isPublic": true,
@@ -384,6 +589,14 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "oauth2",
       "widget"
     ]
+  },
+  {
+    "name": "too-sweet-preview",
+    "url": "https://github.com/hanzlaahmadcheema/too-sweet-preview",
+    "isPublic": true,
+    "language": "TypeScript",
+    "description": "",
+    "topics": []
   },
   {
     "name": "turkish-app",
@@ -416,6 +629,14 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "sqlite",
       "whatsapp"
     ]
+  },
+  {
+    "name": "wendys-sweet-treats-preview",
+    "url": "https://github.com/hanzlaahmadcheema/wendys-sweet-treats-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "Preview website for Wendy's Sweet Treats (home bakery, Kyle/Austin TX)",
+    "topics": []
   },
   {
     "name": "whatsapp-cli",
@@ -464,6 +685,19 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "unix-socket",
       "waybar",
       "whatsapp"
+    ]
+  },
+  {
+    "name": "WinWidgets",
+    "url": "https://github.com/hanzlaahmadcheema/WinWidgets",
+    "isPublic": true,
+    "language": "C#",
+    "description": "Fork of WinWidgets \u2014 a framework for building web-based Windows 11 desktop widgets using HTML, CSS, and JavaScript.",
+    "topics": [
+      "csharp",
+      "desktop-widgets",
+      "widgets",
+      "windows11"
     ]
   },
   {
