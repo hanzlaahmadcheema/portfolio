@@ -409,6 +409,14 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
     ]
   },
   {
+    "name": "nasa-chiropractic-preview",
+    "url": "https://github.com/hanzlaahmadcheema/nasa-chiropractic-preview",
+    "isPublic": true,
+    "language": "N/A",
+    "description": "Preview redesign concept for Nasa Chiropractic, Webster TX \u2014 built from public information.",
+    "topics": []
+  },
+  {
     "name": "OnlineShoppingSystem",
     "url": "https://github.com/hanzlaahmadcheema/OnlineShoppingSystem",
     "isPublic": true,
@@ -459,6 +467,14 @@ export const ARCHIVE_PROJECTS: ArchiveProject[] = [
       "typescript",
       "stock-balance"
     ]
+  },
+  {
+    "name": "petrans-salzburg-preview",
+    "url": "https://github.com/hanzlaahmadcheema/petrans-salzburg-preview",
+    "isPublic": true,
+    "language": "HTML",
+    "description": "Preview website for PETRANS Taxi & Tour Salzburg (Omer Farooq) \u2014 Next.js static export",
+    "topics": []
   },
   {
     "name": "phoenix-rise-preview",
