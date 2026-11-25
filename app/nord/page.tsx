@@ -87,7 +87,7 @@ const SETUP = [
 const NOTES_SETUP_CHECKS = [
   { cmd: "code --version", detail: "VS Code is installed" },
   { cmd: "git --version", detail: "Git is installed" },
-  { cmd: "github.com", detail: "Nord's GitHub account is ready" },
+  { cmd: "github.com", detail: "Your GitHub account is ready" },
   { cmd: "npm install -g @anthropic-ai/claude-code", detail: "Claude Code is installed" },
   { cmd: "claude", detail: "Claude Code starts" },
   { cmd: "ollama pull qwen3:1.7b", detail: "The Qwen3 1.7B model is downloaded" },
@@ -277,8 +277,8 @@ export default function NordPage() {
             </h2>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Our shared notes for the trial. Hanzla explains, Nord types, and
-            we tick things off together as we go — so Nord leaves with a
+            Our shared notes for the trial. Hanzla explains, you type, and
+            we tick things off together as we go — so you leave with a
             complete record to practise from.
           </p>
 
@@ -300,12 +300,12 @@ export default function NordPage() {
               </li>
               <li>
                 <span className="font-semibold text-slate-900 dark:text-white">
-                  3. Nord types it himself.
+                  3. You type it yourself.
                 </span>
               </li>
               <li>
                 <span className="font-semibold text-slate-900 dark:text-white">
-                  4. Nord explains it back
+                  4. You explain it back
                 </span>{" "}
                 — that is how we know it stuck.
               </li>
@@ -408,9 +408,9 @@ export default function NordPage() {
               Build — the task tool, version 1
             </h3>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-              What it does: Nord types a task in plain words, and the tool
+              What it does: you type a task in plain words, and the tool
               pulls out the task and the deadline, keeps a simple list, and
-              reminds him about it.
+              reminds you about it.
             </p>
             <ul className="mt-2 space-y-2">
               {NOTES_BUILD_STEPS.map((s) => (
@@ -453,11 +453,11 @@ export default function NordPage() {
 
           <div>
             <h3 className="text-sm font-bold font-mono text-slate-900 dark:text-white">
-              Nord&apos;s questions
+              Your questions
             </h3>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-              Every question Nord asks, we write down here with its answer.
-              Hanzla updates this list after the session.
+              Every question you ask, we write it down here with its answer.
+              Update this list right after the session.
             </p>
           </div>
 
