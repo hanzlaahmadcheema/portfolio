@@ -6,6 +6,8 @@ import {
   CalendarClock,
   CheckCircle2,
   ExternalLink,
+  FileText,
+  Folder,
   ListChecks,
   Mail,
   Video,
@@ -14,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Nord — AI Tutoring Hub",
   description:
-    "Nord's private hub for AI tutoring with Hanzla Ahmad — today's trial, the session plan, setup checklist and learning resources.",
+    "Nord's private hub for AI tutoring with Hanzla Ahmad — the trial session, the session plan, setup checklist and learning resources.",
   robots: {
     index: false,
     follow: false,
@@ -22,6 +24,15 @@ export const metadata: Metadata = {
 };
 
 const MEET_URL = "https://meet.google.com/yff-miny-dsq";
+
+const DRIVE_FOLDER_URL =
+  "https://drive.google.com/drive/folders/1IdjDPaAKcTYjRxCOGszmwVnL2HbvRNYm";
+
+const DRIVE_FILES = [
+  "Nord_Session_Notes_Detailed_25_Nov_2026.pdf",
+  "Nord_Trial_Slides_25_Nov_2026.pptx",
+  "Nord_Trial_Run_Sheet_25_Nov_2026.pdf",
+];
 
 const SESSIONS = [
   {
@@ -94,30 +105,26 @@ const NOTES_SETUP_CHECKS = [
   { cmd: "ollama list", detail: "The model shows up as ready" },
 ];
 
-const NOTES_BUILD_STEPS = [
+const NOTES_PLANNED_STEPS = [
   {
-    step: "Make the project folder",
-    detail: "mkdir task-tool, then cd task-tool and git init",
+    step: "Planned Step A — Scaffold: the empty page",
+    detail:
+      "In a future build, the agent would create a simple single page — a heading, one input box, an “Add task” button, and an empty task list. Plain HTML, CSS and JavaScript. No login, no database, no framework.",
   },
   {
-    step: "Start the project",
-    detail: "npm init -y, then open the folder in VS Code",
+    step: "Planned Step B — Input and list",
+    detail:
+      "In a future build, typing a sentence and clicking “Add task” would add it to the list with a Done checkbox and a Delete button, saved in the browser so it is still there when the page is refreshed.",
   },
   {
-    step: "Write the task list",
-    detail: "A simple list that holds tasks and deadlines",
+    step: "Planned Step C — Extraction: task and deadline",
+    detail:
+      "In a future build, the tool would split a sentence like “Send the fee reminder to parents by Friday 3pm” into a clean task title and a deadline — and leave the deadline blank when there is none.",
   },
   {
-    step: "Add plain-words input",
-    detail: "Type a task in normal words — the tool reads the task and the date from it",
-  },
-  {
-    step: "Add the reminder",
-    detail: "The tool shows what is due today and what is coming next",
-  },
-  {
-    step: "Run it and test",
-    detail: "Try a real task, see what breaks, fix it together",
+    step: "Planned Step D — The basic reminder",
+    detail:
+      "In a future build, tasks due today would be highlighted amber, overdue tasks red, with a banner counting how many tasks are due today — for example “2 tasks due today”. No phone notifications yet.",
   },
 ];
 
@@ -132,6 +139,145 @@ const NOTES_COMMANDS = [
   { cmd: "ollama run qwen3:1.7b", detail: "Chat with the model on your own computer" },
   { cmd: "ollama list", detail: "See downloaded models" },
 ];
+
+const PROMPT_TYPES = [
+  {
+    name: "Instruction prompt",
+    detail:
+      "Tells the AI exactly what to do. Example: “Write a polite fee reminder for parents, due Friday.” This is the most common type.",
+  },
+  {
+    name: "Question prompt",
+    detail:
+      "Asks for information or an explanation. Example: “What is the difference between a chatbot and an agent, in plain words?”",
+  },
+  {
+    name: "Context prompt",
+    detail:
+      "Gives the background first, before any task. Example: “I work in school admin. I handle fees, enrolments and parent calls. Remember this for what follows.”",
+  },
+  {
+    name: "Example-based prompt",
+    detail:
+      "Shows the AI an example of what you want, then asks for the same pattern. Example: “Here is a parent message I liked. Write a new one in the same style.”",
+  },
+  {
+    name: "Step-by-step prompt",
+    detail:
+      "Breaks the work into ordered steps. Example: “First list the tasks, then add a deadline to each one, then sort them by date.”",
+  },
+  {
+    name: "Role prompt",
+    detail:
+      "Asks the AI to work in a particular role. Example: “Act as an experienced school administrator and review this notice.”",
+  },
+  {
+    name: "Brainstorming prompt",
+    detail:
+      "Asks for ideas and options, not a final answer. Example: “Give me five ways to remind parents about fees without sounding harsh.”",
+  },
+  {
+    name: "Rewrite / improve prompt",
+    detail:
+      "Gives the AI your draft and asks it to improve it. Example: “Make this message shorter, warmer, and clearer. Keep all the facts.”",
+  },
+  {
+    name: "Review / check prompt",
+    detail:
+      "Asks the AI to check work against rules. Example: “Check this list — is anything missing, unclear, or duplicated?”",
+  },
+];
+
+const PROMPT_TECHNIQUES = [
+  {
+    name: "Be specific and clear",
+    detail:
+      "Say exactly what you want, who it is for, and what “done” looks like. “Write a short notice” is vague; “Write a three-sentence notice for parents about Friday's early closing” is clear.",
+  },
+  {
+    name: "Give context",
+    detail:
+      "The AI cannot see your desk, your school, or your last conversation. If a fact matters, put it in the prompt.",
+  },
+  {
+    name: "Break big tasks into steps",
+    detail:
+      "Big work goes wrong when it is asked for all at once. Ask for one phase or one step, check it, then ask for the next. This is the same phase loop as in Hanzla's build method.",
+  },
+  {
+    name: "Give an example",
+    detail:
+      "One good example teaches the AI your style, length, and tone faster than a long description. One example is often enough.",
+  },
+  {
+    name: "Ask for step-by-step thinking",
+    detail:
+      "For a problem or a decision, add: “Think step by step and show your steps.” You can then check the reasoning, not just the answer.",
+  },
+  {
+    name: "Set a role when it helps",
+    detail:
+      "“Act as a school administrator” or “Act as a careful proofreader” focuses the answer on that job's standards and language.",
+  },
+  {
+    name: "Set rules and limits",
+    detail:
+      "State what the AI must do, what it must never do, and what to ask you about instead of guessing. Rules prevent the most common mistakes.",
+  },
+  {
+    name: "Ask for the format you need",
+    detail:
+      "Say whether you want a list, a table, short paragraphs, a message ready to send, or code — and how long it should be. If you do not choose a format, the AI will choose one for you.",
+  },
+  {
+    name: "Iterate",
+    detail:
+      "Your first prompt rarely needs to be your last. Read the answer, say what to keep and what to change, and prompt again. Improving in two or three short rounds is normal, professional work — not a failure.",
+  },
+  {
+    name: "Let the AI ask questions",
+    detail:
+      "End a prompt with: “If anything is unclear, ask me before you start.” A good agent will ask one clear question instead of guessing wrong.",
+  },
+];
+
+const BEST_PROMPT_STEPS = [
+  {
+    name: "1. Context — where we are",
+    detail:
+      "Tell the agent where we are right now — our current situation or position: what is happening, who is involved, what has already been done, and what problem we are solving. Without this, the agent has to guess your situation, and guessed context is the most common reason a good agent gives a wrong answer.",
+  },
+  {
+    name: "2. Task — what to do",
+    detail:
+      "Say exactly what the agent needs to do — the one clear job in this prompt. One prompt, one main task. If there are three jobs, write them as three numbered tasks, or use three prompts in order.",
+  },
+  {
+    name: "3. Example — what good looks like, if possible",
+    detail:
+      "Show an example of what you want, if you have one — a message you liked, a finished task, or the style to copy. Say what the example is for: “Copy this style” is different from “Copy this content.” If you have no example, skip this part — do not invent one.",
+  },
+  {
+    name: "4. Rules — the rules to follow",
+    detail:
+      "Set the rules the agent must follow while it works: use fictional names only, do not add features that were not asked for, ask before running anything, keep real student details out. Rules are also where you set limits — length, tone, and what to leave out.",
+  },
+  {
+    name: "5. Format — how to give it back",
+    detail:
+      "Say in which format you need the answer back: a short message ready to copy, a table, a numbered list, bullet points, or a single file. Add length and tone here too — for example, “three sentences, polite and warm.”",
+  },
+];
+
+const PROMPT_CHECK = [
+  "Have I told the agent where we are — our situation right now?",
+  "Have I said exactly what it needs to do?",
+  "Have I shown an example, if I have one?",
+  "Have I set the rules and limits it must follow?",
+  "Have I said in which format I need the answer?",
+];
+
+const WORKED_EXAMPLE = `Context: I work in school admin. It is the middle of term, fees for this term are due this Friday, and some parents have not paid yet. I need to remind them without sounding harsh. Task: Write a fee reminder message I can send to parents. Example: Here is the style I like — ‘Dear parents, a gentle reminder that this term's fees are due on Friday. Thank you to everyone who has already paid. Please contact the office if you need help.’ Write in this same warm, short style. Rules: Use no real names. Do not add payment amounts, bank details, or a late fee — I have not given you those. Keep it polite, with no pressure or threats. If you need a detail I have not given you, ask me instead of inventing it. Format: Give me one message only, in three short sentences, ready to copy and send — no heading, no explanation before or after it.`;
 
 const RESOURCES = [
   {
@@ -200,12 +346,12 @@ export default function NordPage() {
           </p>
         </header>
 
-        {/* Today's trial */}
+        {/* Trial session */}
         <section className="p-4 sm:p-6 rounded-2xl bg-white/90 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800/80 shadow-sm space-y-4">
           <div className="flex items-center gap-2">
             <Video className="w-5 h-5 text-sky-600 dark:text-cyan-400" />
             <h2 className="text-base sm:text-lg font-bold font-mono text-slate-900 dark:text-white">
-              Today&apos;s trial
+              Trial session — 25 November 2026
             </h2>
           </div>
 
@@ -214,17 +360,18 @@ export default function NordPage() {
               <CalendarClock className="w-4 h-4 text-slate-400 dark:text-slate-500" />
               Wednesday 25 November 2026
             </span>
-            <span>8:00 PM SGT / 5:00 PM PKT</span>
-            <span>2 hours</span>
+            <span>5:00 – 9:00 PM PKT / 8:00 PM – 12:00 midnight SGT</span>
+            <span>4 hours</span>
             <span>Google Meet</span>
           </div>
 
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            In today&apos;s 2-hour hands-on trial we build the first working
-            version of your admin task tool: type a task in plain words, AI
-            pulls out the task and the deadline, a simple task list, and a
-            basic reminder. You do the typing — everything we build goes into
-            your own GitHub.
+            This was a 4-hour discussion session. We talked through the ideas
+            in detail: what AI is, how a chatbot differs from an agent,
+            Hanzla&apos;s build method, how to write good prompts, and the
+            idea of an admin task tool you could build one day. No app was
+            created, started, or built — the session was discussion only, and
+            everything we covered is written up in the session notes below.
           </p>
 
           <div>
@@ -273,13 +420,14 @@ export default function NordPage() {
           <div className="flex items-center gap-2">
             <BookOpen className="w-5 h-5 text-sky-600 dark:text-cyan-400" />
             <h2 className="text-base sm:text-lg font-bold font-mono text-slate-900 dark:text-white">
-              Session notes — today&apos;s trial
+              Session notes — the trial session
             </h2>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Our shared notes for the trial. Hanzla explains, you type, and
-            we tick things off together as we go — so you leave with a
-            complete record to practise from.
+            Our shared notes for the trial session. Hanzla explains, you type,
+            and we tick things off together as we go — so you leave with a
+            complete record to practise from. This was a discussion session —
+            no app was created or started.
           </p>
 
           <div>
@@ -398,38 +546,32 @@ export default function NordPage() {
 
           <div>
             <h3 className="text-sm font-bold font-mono text-slate-900 dark:text-white">
-              Today&apos;s session
+              What the four hours covered
             </h3>
-            <ul className="mt-2 space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
+            <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-slate-600 dark:text-slate-400">
               <li>
-                <span className="font-mono font-semibold text-slate-900 dark:text-white">
-                  5:00 – 5:25
-                </span>{" "}
-                — Basics: GitHub, AI agents, open source
+                AI in one line, chatbot vs agent, GitHub, and open source and
+                local models
               </li>
               <li>
-                <span className="font-mono font-semibold text-slate-900 dark:text-white">
-                  5:25 – 5:35
-                </span>{" "}
-                — Setup check
+                Hanzla&apos;s build method — chatbot first, then the agent,
+                five documents, the docs folder, the rule, and the phase loop
               </li>
               <li>
-                <span className="font-mono font-semibold text-slate-900 dark:text-white">
-                  5:35 – 6:30
-                </span>{" "}
-                — Build the task tool, version 1
+                Prompting — how to ask well, the types of prompts, and the
+                techniques that make a prompt work
               </li>
               <li>
-                <span className="font-mono font-semibold text-slate-900 dark:text-white">
-                  6:30 – 6:50
-                </span>{" "}
-                — Test it on real tasks
+                The best way to write a prompt — Context, Task, Example,
+                Rules, Format
               </li>
               <li>
-                <span className="font-mono font-semibold text-slate-900 dark:text-white">
-                  6:50 – 7:00
-                </span>{" "}
-                — Wrap-up and practice for the week
+                The planned admin task tool idea — how it would work, and the
+                planned build steps for a future build
+              </li>
+              <li>
+                Your questions answered — why Claude forgets long chats,
+                reminders when the app is closed, and keeping school data safe
               </li>
             </ul>
           </div>
@@ -489,31 +631,30 @@ export default function NordPage() {
 
           <div>
             <h3 className="text-sm font-bold font-mono text-slate-900 dark:text-white">
-              Build — the task tool, version 1
+              How the task tool would work — the idea we discussed
             </h3>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-              What it does: you type a task in plain words, and the tool
-              pulls out the task and the deadline, keeps a simple list, and
-              reminds you about it.
+              What it would do: you would type a task in plain words, and the
+              tool would pull out the task and the deadline, keep a simple
+              list, and remind you about it. This is the idea we discussed —
+              no app was created or started in this session. A first version
+              would not include voice input, image input, a dashboard, or
+              phone push notifications; those would be later steps.
             </p>
-            <ul className="mt-2 space-y-2">
-              {NOTES_BUILD_STEPS.map((s) => (
-                <li key={s.step} className="flex items-start gap-2.5 text-sm">
-                  <input
-                    type="checkbox"
-                    className="mt-0.5 h-4 w-4 shrink-0 accent-sky-600 dark:accent-cyan-500"
-                  />
-                  <span>
-                    <span className="font-semibold text-slate-900 dark:text-white">
-                      {s.step}
-                    </span>
-                    <span className="block text-slate-600 dark:text-slate-400">
-                      {s.detail}
-                    </span>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+              The planned build steps for a future build — discussed, not
+              done:
+            </p>
+            <ol className="mt-2 space-y-3">
+              {NOTES_PLANNED_STEPS.map((s) => (
+                <li key={s.step} className="text-sm text-slate-600 dark:text-slate-400">
+                  <span className="font-semibold text-slate-900 dark:text-white">
+                    {s.step}
                   </span>
+                  <span className="block">{s.detail}</span>
                 </li>
               ))}
-            </ul>
+            </ol>
           </div>
 
           <div>
@@ -537,6 +678,120 @@ export default function NordPage() {
 
           <div>
             <h3 className="text-sm font-bold font-mono text-slate-900 dark:text-white">
+              Types of prompts
+            </h3>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+              Not every prompt does the same job. Knowing which type you are
+              writing helps you write it well — and most real prompts are a
+              mix of two or three types together. You do not need to name the
+              type when you write. The point is the habit: before you send a
+              prompt, ask yourself — am I instructing, asking, giving context,
+              showing an example, or asking for a check?
+            </p>
+            <ul className="mt-2 space-y-2">
+              {PROMPT_TYPES.map((t) => (
+                <li key={t.name} className="text-sm text-slate-600 dark:text-slate-400">
+                  <span className="font-semibold text-slate-900 dark:text-white">
+                    {t.name}:
+                  </span>{" "}
+                  {t.detail}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold font-mono text-slate-900 dark:text-white">
+              Prompting techniques
+            </h3>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+              These techniques work with every type of prompt above. You can
+              use one, or combine several in a single prompt.
+            </p>
+            <ul className="mt-2 space-y-2">
+              {PROMPT_TECHNIQUES.map((t) => (
+                <li key={t.name} className="text-sm text-slate-600 dark:text-slate-400">
+                  <span className="font-semibold text-slate-900 dark:text-white">
+                    {t.name}:
+                  </span>{" "}
+                  {t.detail}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 text-sm text-slate-600 dark:text-slate-400">
+              Putting several together: “Act as an experienced school
+              administrator. Write a fee reminder for parents, for this term,
+              using fictional names only. Here is a message in the style I
+              like: [example]. Keep it to three short, polite sentences, and
+              ask me if any detail is missing before you write it.”
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold font-mono text-slate-900 dark:text-white">
+              The best way to write a prompt
+            </h3>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+              If you remember only one method from this session, remember this
+              one. The best prompts have five parts, in this order. Think of
+              it as briefing a capable new assistant who knows nothing about
+              your school yet: first you tell her where things stand, then
+              what to do, then what good looks like, then the rules, then how
+              to hand the work back to you.
+            </p>
+            <p className="mt-2 text-sm font-mono font-bold text-slate-900 dark:text-white">
+              Context + Task + Example + Rules + Format
+            </p>
+            <ol className="mt-2 space-y-3">
+              {BEST_PROMPT_STEPS.map((s) => (
+                <li key={s.name} className="text-sm text-slate-600 dark:text-slate-400">
+                  <span className="font-semibold text-slate-900 dark:text-white">
+                    {s.name}
+                  </span>
+                  <span className="block">{s.detail}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="mt-3 text-sm font-semibold text-slate-900 dark:text-white">
+              A complete example, using all five parts:
+            </p>
+            <div className="mt-2 rounded-xl border border-slate-200/90 dark:border-slate-800/80 bg-slate-50 dark:bg-[#0B101D] p-4">
+              <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                {WORKED_EXAMPLE}
+              </p>
+            </div>
+            <p className="mt-3 text-sm text-slate-600 dark:text-slate-400">
+              Notice what each part prevents. Context stops the agent
+              inventing your situation. The Task stops it doing a different
+              job. The Example stops it using a tone you dislike. The Rules
+              stop it adding amounts, details, or features you never approved.
+              The Format stops it handing back an essay when you needed a
+              message.
+            </p>
+            <p className="mt-3 text-sm font-semibold text-slate-900 dark:text-white">
+              A quick check before you press send:
+            </p>
+            <ul className="mt-2 space-y-1.5">
+              {PROMPT_CHECK.map((q) => (
+                <li key={q} className="flex items-start gap-2.5 text-sm">
+                  <input
+                    type="checkbox"
+                    className="mt-0.5 h-4 w-4 shrink-0 accent-sky-600 dark:accent-cyan-500"
+                  />
+                  <span className="text-slate-600 dark:text-slate-400">{q}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+              If all five answers are yes, your prompt is ready. Keep this
+              five-part order as a habit, even for small prompts — but do not
+              drop Context or Rules to save time. Those two parts protect you
+              most.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold font-mono text-slate-900 dark:text-white">
               Your questions
             </h3>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
@@ -550,16 +805,19 @@ export default function NordPage() {
               Practice this week
             </h3>
             <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-slate-600 dark:text-slate-400">
-              <li>Run the task tool on three real tasks from your own work.</li>
               <li>
-                Write a short summary of the session in a markdown file in
-                the project folder.
+                Re-read these notes and pick out the three ideas that matter
+                most for your admin work.
               </li>
               <li>
-                In Claude, try a fresh chat for each new task, and try the
-                /compact command in a long chat.
+                Write one prompt using the full five-part method above —
+                Context, Task, Example, Rules, Format — and check it against
+                the five-question checklist before you send it.
               </li>
-              <li>Install anything from the setup check that was still missing.</li>
+              <li>
+                Write a short summary of this session in a markdown file — a
+                few lines on what we discussed and what you learned.
+              </li>
             </ul>
           </div>
 
@@ -568,11 +826,52 @@ export default function NordPage() {
               Next session
             </h3>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-              Date and topic agreed at the end of today&apos;s trial. Likely
-              topic: version 2 of the task tool — saving tasks to a file,
-              priorities, and dates that repeat.
+              Hanzla will catch up with you on 30 November to confirm the
+              next session. The next session is tentatively planned for 1
+              December. From 7 December, regular sessions are planned in
+              Monday and Tuesday slots. If you would like extra time beyond
+              the booked sessions, extra hours are booked the same way,
+              through Freelancer, at $6 per hour.
             </p>
           </div>
+        </section>
+
+        {/* Session files — Nord folder */}
+        <section className="p-4 sm:p-6 rounded-2xl bg-white/90 dark:bg-[#0B101D] border border-slate-200/90 dark:border-slate-800/80 shadow-sm space-y-4">
+          <div className="flex items-center gap-2">
+            <Folder className="w-5 h-5 text-sky-600 dark:text-cyan-400" />
+            <h2 className="text-base sm:text-lg font-bold font-mono text-slate-900 dark:text-white">
+              Session files — Nord folder
+            </h2>
+          </div>
+          <p className="text-sm text-slate-600 dark:text-slate-400">
+            Everything from the trial session, in one shared Google Drive
+            folder. The folder is shared with you as viewer — you can open
+            and download the files.
+          </p>
+
+          <div>
+            <a
+              href={DRIVE_FOLDER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-mono font-bold rounded-xl bg-sky-600 hover:bg-sky-500 dark:bg-cyan-600 dark:hover:bg-cyan-500 text-white shadow-sm transition-colors"
+            >
+              <Folder className="w-4 h-4" />
+              Open the Nord folder in Google Drive
+            </a>
+          </div>
+
+          <ul className="space-y-2">
+            {DRIVE_FILES.map((f) => (
+              <li key={f} className="flex items-start gap-2.5 text-sm">
+                <FileText className="mt-0.5 h-4 w-4 shrink-0 text-slate-400 dark:text-slate-500" />
+                <span className="font-mono text-[13px] text-slate-900 dark:text-white">
+                  {f}
+                </span>
+              </li>
+            ))}
+          </ul>
         </section>
 
         {/* Setup checklist */}
