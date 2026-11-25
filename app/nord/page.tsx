@@ -314,6 +314,90 @@ export default function NordPage() {
 
           <div>
             <h3 className="text-sm font-bold font-mono text-slate-900 dark:text-white">
+              Hanzla&apos;s method — how we build
+            </h3>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+              This is how Hanzla builds software, and how you will learn to
+              build it too. The chatbot plans with you, the agent only builds,
+              and you stay in charge of every decision.
+            </p>
+            <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/90 dark:border-slate-800/80 bg-white dark:bg-[#0B101D]">
+              <img
+                src="/nord-workflow.svg"
+                alt="Hanzla's software building workflow: chatbot context, agent setup, five documents, docs folder, finalise, the rule, and the phase loop"
+                className="w-full"
+              />
+            </div>
+            <ol className="mt-4 space-y-3">
+              <li className="text-sm text-slate-600 dark:text-slate-400">
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  1. Chatbot first.
+                </span>{" "}
+                Hanzla opens a chatbot — not an agent — and explains the full
+                context: what we are building, the stack, the technologies,
+                and the business model.
+              </li>
+              <li className="text-sm text-slate-600 dark:text-slate-400">
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  2. Agent and setup.
+                </span>{" "}
+                Then Hanzla brings in an agent like Claude, sets up the
+                project folder, and sets up Git. That is the first step before
+                any code.
+              </li>
+              <li className="text-sm text-slate-600 dark:text-slate-400">
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  3. Five documents.
+                </span>{" "}
+                Together with the chatbot, Hanzla prepares five core
+                documents, in this order: Project Charter, Business
+                Requirements Document, Product Requirements Document,
+                Technical Feasibility and Architecture Document, Product
+                Execution Plan. The chatbot asks questions one by one, and
+                each document is finished before the next one starts.
+              </li>
+              <li className="text-sm text-slate-600 dark:text-slate-400">
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  4. Docs folder.
+                </span>{" "}
+                Hanzla downloads all five documents and keeps them in a docs
+                folder inside the project, where the agent can reach them.
+              </li>
+              <li className="text-sm text-slate-600 dark:text-slate-400">
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  5. Finalise.
+                </span>{" "}
+                Hanzla reviews everything with the chatbot to finalise it.
+                Then the real prompting begins.
+              </li>
+              <li className="text-sm text-slate-600 dark:text-slate-400">
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  6. The rule.
+                </span>{" "}
+                The agent is only for implementation. All decisions are made
+                by Hanzla, with the chatbot&apos;s help.
+              </li>
+              <li className="text-sm text-slate-600 dark:text-slate-400">
+                <span className="font-semibold text-slate-900 dark:text-white">
+                  7. The phase loop.
+                </span>{" "}
+                Hanzla gives the agent one phase at a time. The agent works on
+                it and writes a report. Hanzla takes the report back to the
+                chatbot, which checks it for anything missing. If something is
+                missing, the chatbot gives the agent a new prompt to cover it.
+                If everything is fixed, the chatbot prepares the next phase —
+                and if a decision is needed, it asks Hanzla first. Then the
+                loop repeats.
+              </li>
+            </ol>
+            <p className="mt-3 text-sm text-slate-600 dark:text-slate-400">
+              Other documents — for example UI/UX — can be added later. These
+              five are the starting core.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold font-mono text-slate-900 dark:text-white">
               Today&apos;s session
             </h3>
             <ul className="mt-2 space-y-1.5 text-sm text-slate-600 dark:text-slate-400">

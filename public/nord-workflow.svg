@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1480" viewBox="0 0 900 1480" font-family="Arial, Helvetica, sans-serif">
+<rect width="900" height="1480" fill="#ffffff"/>
+<text x="450" y="62" text-anchor="middle" font-size="44" font-weight="bold" fill="#0f172a">Software Building Workflow</text>
+<text x="450" y="108" text-anchor="middle" font-size="22" fill="#64748b">7-Step Process — from planning to delivery</text>
+<rect x="70" y="150" width="760" height="120" rx="16" fill="#bfdbfe" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="140" cy="210" r="42" fill="#0891b2"/>
+<text x="140" y="224" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffffff">1</text>
+<text x="205" y="196" font-size="30" font-weight="bold" fill="#0f172a">Chatbot</text>
+<text x="205" y="226" font-size="19" fill="#1e293b">Explain the full context: stack,</text>
+<text x="205" y="252" font-size="19" fill="#1e293b">technologies, business model</text>
+<line x1="450" y1="270" x2="450" y2="306" stroke="#0891b2" stroke-width="6"/>
+<polygon points="450,320 432,300 468,300" fill="#0891b2"/>
+<rect x="70" y="320" width="760" height="120" rx="16" fill="#bfdbfe" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="140" cy="380" r="42" fill="#0891b2"/>
+<text x="140" y="394" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffffff">2</text>
+<text x="205" y="366" font-size="30" font-weight="bold" fill="#0f172a">Agent setup</text>
+<text x="205" y="396" font-size="19" fill="#1e293b">Bring in Claude, set up the folder,</text>
+<text x="205" y="422" font-size="19" fill="#1e293b">set up Git</text>
+<line x1="450" y1="440" x2="450" y2="476" stroke="#0891b2" stroke-width="6"/>
+<polygon points="450,490 432,470 468,470" fill="#0891b2"/>
+<rect x="70" y="490" width="760" height="172" rx="16" fill="#bfdbfe" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="140" cy="576" r="42" fill="#0891b2"/>
+<text x="140" y="590" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffffff">3</text>
+<text x="205" y="536" font-size="30" font-weight="bold" fill="#0f172a">Five documents</text>
+<text x="205" y="566" font-size="19" fill="#1e293b">Project Charter, Business Requirements, Product</text>
+<text x="205" y="592" font-size="19" fill="#1e293b">Requirements, Technical Feasibility and</text>
+<text x="205" y="618" font-size="19" fill="#1e293b">Architecture, Product Execution Plan.</text>
+<text x="205" y="644" font-size="19" fill="#1e293b">The chatbot asks questions one by one.</text>
+<line x1="450" y1="662" x2="450" y2="698" stroke="#0891b2" stroke-width="6"/>
+<polygon points="450,712 432,692 468,692" fill="#0891b2"/>
+<rect x="70" y="712" width="760" height="120" rx="16" fill="#bfdbfe" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="140" cy="772" r="42" fill="#0891b2"/>
+<text x="140" y="786" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffffff">4</text>
+<text x="205" y="758" font-size="30" font-weight="bold" fill="#0f172a">Docs folder</text>
+<text x="205" y="788" font-size="19" fill="#1e293b">Download all five documents into the</text>
+<text x="205" y="814" font-size="19" fill="#1e293b">project’s docs folder</text>
+<line x1="450" y1="832" x2="450" y2="868" stroke="#0891b2" stroke-width="6"/>
+<polygon points="450,882 432,862 468,862" fill="#0891b2"/>
+<rect x="70" y="882" width="760" height="120" rx="16" fill="#bfdbfe" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="140" cy="942" r="42" fill="#0891b2"/>
+<text x="140" y="956" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffffff">5</text>
+<text x="205" y="928" font-size="30" font-weight="bold" fill="#0f172a">Finalise</text>
+<text x="205" y="958" font-size="19" fill="#1e293b">Review everything with the chatbot,</text>
+<text x="205" y="984" font-size="19" fill="#1e293b">then the real prompting begins.</text>
+<line x1="450" y1="1002" x2="450" y2="1038" stroke="#0891b2" stroke-width="6"/>
+<polygon points="450,1052 432,1032 468,1032" fill="#0891b2"/>
+<rect x="70" y="1052" width="760" height="120" rx="16" fill="#bfdbfe" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="140" cy="1112" r="42" fill="#0891b2"/>
+<text x="140" y="1126" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffffff">6</text>
+<text x="205" y="1098" font-size="30" font-weight="bold" fill="#0f172a">The rule</text>
+<text x="205" y="1128" font-size="19" fill="#1e293b">The agent implements only. Decisions stay</text>
+<text x="205" y="1154" font-size="19" fill="#1e293b">with the person and the chatbot.</text>
+<line x1="450" y1="1172" x2="450" y2="1208" stroke="#0891b2" stroke-width="6"/>
+<polygon points="450,1222 432,1202 468,1202" fill="#0891b2"/>
+<rect x="70" y="1222" width="760" height="146" rx="16" fill="#bfdbfe" stroke="#93c5fd" stroke-width="2"/>
+<circle cx="140" cy="1295" r="42" fill="#0891b2"/>
+<text x="140" y="1309" text-anchor="middle" font-size="40" font-weight="bold" fill="#ffffff">7</text>
+<text x="205" y="1268" font-size="30" font-weight="bold" fill="#0f172a">Phase loop</text>
+<text x="205" y="1298" font-size="19" fill="#1e293b">Phase to agent, agent builds and writes a report,</text>
+<text x="205" y="1324" font-size="19" fill="#1e293b">chatbot checks the report, fix what is missing</text>
+<text x="205" y="1350" font-size="19" fill="#1e293b">or start the next phase. Decisions go to the person.</text>
+<text x="450" y="1423" text-anchor="middle" font-size="20" fill="#64748b">Consistent. Iterative. Human-led.</text>
+</svg>
